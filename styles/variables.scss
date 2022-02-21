@@ -1,0 +1,30 @@
+
+//Colors
+$dark-blue: #011627;
+$button-color: #00C9E0;
+
+//Fonts
+$baloo: 'Baloo Da 2';
+$montserrat-regular: 'Montserrat-Regular';
+$alata-regular: 'Alata-Regular';
+
+@font-face {
+  font-family: 'Baloo Da 2';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/BalooDa2-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Alata-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Alata-Regular.ttf');
+}
