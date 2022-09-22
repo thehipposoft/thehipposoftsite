@@ -40,3 +40,20 @@ p {
 li {
   font-family: $alata-regular;
 }
+button {
+  font-family: $baloo;
+}
+
+
+//Technologies Styles
+
+.card:hover {
+
+  .card-text {
+    display: block;
+  }
+
+  .card-button-hover {
+    background-color: #B5730E;
+  }
+}

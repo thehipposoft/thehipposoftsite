@@ -12,12 +12,15 @@ const Button = (
 ) => {
 
     return (
-        <button
-            type={'button'}
-            className={styles.container}
-        >
-            {label}
-        </button>
+        <div className='relative'>
+            <button
+                type={'button'}
+                className={styles.container}
+            >
+                {label}
+            </button>
+            <span className='bg-white h-[1px] w-[30px] absolute top-[25px]'/>
+        </div>
     )
 };
 

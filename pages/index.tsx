@@ -1,8 +1,15 @@
 import Head from 'next/head'
+//styles
 import styles from '../styles/Home.module.scss';
+//components
 import Header from '../components/header/Header';
 import Banner from '../components/banner/Banner';
 import PickYourTrip from '../components/pickYourTrip/PickYourTrip';
+import Value from '../components/values';
+import Us from '../components/us';
+import Technologies from '../components/technologies';
+import Team from '../components/team';
+import Footer from '../components/footer';
 
 export default function Home() {
     return (
@@ -15,14 +22,18 @@ export default function Home() {
 
             <main className={styles.main}>
                 <Header />
-                <div className={'px-20'}>
+                <div className={''}>
                     <Banner />
                     <PickYourTrip />
+                    <Value />
+                    <Us />
+                    <Technologies />
+                    <Team />
                 </div>
             </main>
 
             <footer className={styles.footer}>
-                Footer
+                <Footer />
             </footer>
         </div>
     )

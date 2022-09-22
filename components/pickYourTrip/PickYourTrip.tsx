@@ -4,7 +4,7 @@ const PickYourTrip = () => {
     const [projectSelected, setProjectSelected] = useState<boolean>(false);
 
     return (
-        <div className={''}>
+        <div className={'hidden'}>
             <div className={'flex'}>
                 <h2>Pick your <br /> trip</h2>
                 <p>
