@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
     return(
-        <div className='max-w-[1200px] m-auto flex flex-col items-center'>
+        <div className='max-w-[1200px] m-auto flex flex-col items-center text-center justify-center h-screen'>
             <motion.h1
                 initial={{
                     opacity: 0,
@@ -19,6 +19,7 @@ const Footer = () => {
                 }}
                 viewport={{ once: true }}
                 transition={{duration: 1}}
+                className={'text-7xl md:text-8xl pt-8'}
             >See you soon!
             </motion.h1>
             <motion.p

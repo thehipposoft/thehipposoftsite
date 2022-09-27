@@ -9,8 +9,8 @@ import { CARD_DATA } from './constants';
 
 const Technologies = () => {
     return(
-        <div className='max-w-[1200px] m-auto'>
-            <div className='flex flex-col items-center'>
+        <div className='max-w-[1200px] mx-auto py-4'>
+            <div className='flex flex-col items-center text-center md:text-left'>
                 <motion.h1
                     initial={{
                         opacity: 0,
@@ -22,10 +22,11 @@ const Technologies = () => {
                     }}
                     viewport={{ once: true }}
                     transition={{duration: 1}}
-                >Technologies
+                    className={'text-7xl md:text-8xl'}
+                >Our projects
                 </motion.h1>
                 <motion.p 
-                className='md:w-2/4 text-center'
+                className='md:w-2/4 text-center mb-6 mt-4 md:mt-0'
                 initial={{
                     opacity: 0,
                     y: 50,
@@ -36,10 +37,10 @@ const Technologies = () => {
                 }}
                 viewport={{ once: true }}
                 transition={{duration: 1, delay: 0.5}}
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.</motion.p>
+                >A quick look to our lastest projects</motion.p>
             </div>
             <motion.div 
-            className='grid grid-cols-3 gap-4'
+            className='grid md:grid-cols-3 md:gap-4 gap-8 py-6'
             initial={{
                 opacity: 0,
                 x: -50,

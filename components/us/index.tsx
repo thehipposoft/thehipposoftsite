@@ -8,7 +8,7 @@ import Button from '../common/Button'
 const Us = () => {
     return(
         <div className='flex justify-between max-w-[1200px] m-auto py-4'>
-            <div className='flex flex-col justify-around md:w-3/12 mt-8'>
+            <div className='flex flex-col justify-around md:w-3/12 mt-8 text-center md:text-left'>
                 <div>
                     <motion.h1 
                         initial={{

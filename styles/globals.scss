@@ -47,13 +47,27 @@ button {
 
 //Technologies Styles
 
+.card-image {
+  filter: invert(99%) sepia(16%) saturate(2%) hue-rotate(158deg) brightness(113%) contrast(100%);
+}
+
+.card-button-hover {
+  position: relative;
+  top: 25px;
+  box-shadow: 5px 5px 30px rgba(230, 246, 248, 0.432);
+}
+
 .card:hover {
 
   .card-text {
-    display: block;
+    opacity: 1;
   }
 
   .card-button-hover {
-    background-color: #B5730E;
+    background-color: #FFF;
+  }
+
+  .card-image {
+    filter: invert(0%);
   }
 }

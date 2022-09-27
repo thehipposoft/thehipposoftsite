@@ -7,7 +7,7 @@ import Box from './Box';
 const Value = () => {
     return(
         <div className='max-w-[1200px] m-auto'>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center text-center md:text-left my-4 md:my-0'>
                 <motion.h1
                     initial={{
                         opacity: 0,
@@ -19,6 +19,8 @@ const Value = () => {
                     }}
                     viewport={{ once: true }}
                     transition={{duration: 1}}
+                    className={'text-6xl md:text-8xl'}
+
                 >We add value</motion.h1> 
                 <motion.p
                 initial={{

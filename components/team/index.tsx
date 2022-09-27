@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const Team = () => {
     return(
-        <div className='sm:h-screen'>
+        <div className='sm:h-screen hidden'>
             <motion.h1
                 className='flex justify-center items-center'
                 initial={{

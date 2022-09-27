@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 //
+import { motion } from 'framer-motion';
 
 //
 
@@ -13,19 +14,20 @@ type cardProps = {
 const Card = ({image, title, text}:cardProps) => {
     return(
         <div 
-            className='flex flex-col items-center card'
+            className='flex flex-col items-center card py-4 cursor-pointer'
             style={{
                 backgroundImage:  `url(${image})`,
                 backgroundSize: 'cover'
             }}
         >
-            <p className='text-xl py-6'>{title}</p>
-            <p className='card-text'>{text}</p>
+            <p className='text-xl pt-6'>{title}</p>
+            <p className='card-text opacity-0 duration-500'>{text}</p>
             <div className='bg-dark-blue py-1 px-3 card-button-hover duration-700 ease'>
                 <Image
                     src={'/assets/images/technologies/arrowBox.svg'}
                     width={35}
                     height={35}
+                    className={'card-image'}
                  />
             </div>
         </div>
