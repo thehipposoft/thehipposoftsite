@@ -9,16 +9,22 @@ type cardProps = {
     image: string,
     title: string,
     text: string,
+    linkTo: string,
+    variants: any,
 };
 
-const Card = ({image, title, text}:cardProps) => {
+const Card = ({image, title, text, linkTo, variants}:cardProps) => {
     return(
-        <div 
+        <motion.a
+            href={linkTo}
+            target={"_blank"}
+            rel={'noreferrer'}
             className='flex flex-col items-center card py-4 cursor-pointer'
             style={{
                 backgroundImage:  `url(${image})`,
                 backgroundSize: 'cover'
             }}
+            variants={variants}
         >
             <p className='text-xl pt-6'>{title}</p>
             <p className='card-text opacity-0 duration-500'>{text}</p>
@@ -28,9 +34,9 @@ const Card = ({image, title, text}:cardProps) => {
                     width={35}
                     height={35}
                     className={'card-image'}
-                 />
+                />
             </div>
-        </div>
+        </motion.a>
     )
 }
 

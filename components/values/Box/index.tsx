@@ -7,13 +7,16 @@ type boxProps = {
     image: string,
     title: string,
     text: string,
+    variants: any,
 };
 
 
-const Box = ({image, title, text}:boxProps) => {
+const Box = ({image, title, text, variants}:boxProps) => {
     return(
-        <motion.div 
-        className='flex flex-col md:items-start items-center bg-box-color p-8 rounded-3xl transition ease duration-500 hover:-translate-y-4 shadow-md hover:shadow-slate-400 w-3/4 md:w-full mx-auto md:mx-0'>
+        <motion.div
+            className='flex flex-col md:items-start items-center bg-box-color p-8 rounded-3xl transition ease duration-500 hover:-translate-y-4 shadow-md hover:shadow-slate-400 w-3/4 md:w-full mx-auto md:mx-0'
+            variants={variants}
+            >
             <div className='rounded-xl bg-box-image-color min-h-[80px] min-w-[80px] flex justify-center mb-4'>
                 <img src={image} alt='value icon' className='my-0 mx-auto'/>
             </div>
@@ -24,3 +27,4 @@ const Box = ({image, title, text}:boxProps) => {
 }
 
 export default Box;
+

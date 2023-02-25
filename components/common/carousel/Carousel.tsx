@@ -60,7 +60,7 @@ const Caraousel = () => {
 
     return(
         <motion.div 
-        className='relative  rounded-2xl'
+        className='relative rounded-2xl'
         initial={{
             opacity: 0,
             x: -50,
@@ -73,7 +73,7 @@ const Caraousel = () => {
         transition={{duration: 1}}
         >
             <div className="">
-                <div className="ContenedorSlides flex flex-nowrap" ref={carousel}>
+                <div className="flex flex-nowrap" ref={carousel}>
                     {
                         TEAM_DATA.map((value, index) => <Slide title={value.title} text={value.text} name={value.name} rol={value.rol} />)
                     }

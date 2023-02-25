@@ -10,10 +10,11 @@ import styles from './Header.module.scss';
 const Header = () => {
     return (
         <motion.div 
-        className={styles.container}
-        initial={{opacity: 0}}
-        whileInView={{opacity: 1}}
-        transition={{duration: 1}}
+            className={styles.container}
+            initial={{opacity: 0}}
+            whileInView={{opacity: 1}}
+            transition={{duration: 1.5}}
+            viewport={{ once: true }}
         >
             <Image src={'/assets/logo.png'} alt={'Hipposoft Logo'} width={154} height={60} />
             <Button label={'MENU'} />
