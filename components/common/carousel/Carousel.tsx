@@ -73,7 +73,7 @@ const Caraousel = () => {
         transition={{duration: 1}}
         >
             <div className="">
-                <div className="flex flex-nowrap" ref={carousel}>
+                <div className="flex flex-nowrap justify-center items-center" ref={carousel}>
                     {
                         TEAM_DATA.map((value, index) => <Slide title={value.title} text={value.text} name={value.name} rol={value.rol} />)
                     }
@@ -85,17 +85,17 @@ const Caraousel = () => {
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0}}
                 transition={{duration: 0.3}}
-                className='cursor-pointer outline-none ease-in absolute bg-box-image-color rounded-full mx-2'
+                className='carousel-button cursor-pointer outline-none ease-in absolute bg-box-image-color rounded-full mx-2'
                 >
-                    <img src="/assets/images/team/flechaIzquierda.svg" className='p-4'/>
+                    <img src='/assets/images/technologies/arrowBox.svg' className='carousel-left-arrow p-2'/>
                 </motion.button>
                 <motion.button 
                 onMouseDown={next}
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0}}
                 transition={{duration: 0.3}}
-                className='carousel-button-right cursor-pointer outline-none ease-in absolute rounded-full bg-box-image-color mx-2'>
-                    <img src="/assets/images/team/flechaDerecha.svg" className="p-4"/>
+                className='carousel-button right cursor-pointer outline-none ease-in absolute rounded-full bg-box-image-color mx-2'>
+                    <img src='/assets/images/technologies/arrowBox.svg' className="carousel-right-arrow p-2"/>
                 </motion.button>
             </div>
         </motion.div>

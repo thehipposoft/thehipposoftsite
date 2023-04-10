@@ -28,7 +28,7 @@ const Card = ({image, title, text, linkTo, variants}:cardProps) => {
         >
             <p className='text-xl pt-6'>{title}</p>
             <p className='card-text opacity-0 duration-500'>{text}</p>
-            <div className='bg-dark-blue py-1 px-3 card-button-hover duration-700 ease'>
+        <div className='bg-dark-blue py-1 px-3 card-button-hover duration-700 ease'>
                 <Image
                     src={'/assets/images/technologies/arrowBox.svg'}
                     width={35}

@@ -4,13 +4,21 @@
   //padding: 0 2rem;
 }
 
-.main, .footer {
+.main {
   min-height: 100vh;
   flex: 1;
   background-image: url("/assets/hippo-img.png");
   background-color: $dark-blue;
 }
 
+.footer {
+  background-color: $dark-blue;
+  min-height: 80vh;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
 
 @media (max-width: 600px) {
   .grid {

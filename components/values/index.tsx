@@ -21,10 +21,10 @@ const Value = () => {
     }
 
     const boxVariants: Variants = {
-        hidden: { opacity: 0, x: 25 },
+        hidden: { opacity: 0, y: 25 },
         visible: {
             opacity: 1,
-            x: 0,
+            y: 0,
         },
     }
 
@@ -57,7 +57,7 @@ const Value = () => {
                     viewport={{ once: true }}
                     transition={{duration: 1.5, delay: 1.5}} 
                     className='md:mb-8'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    We create and build digital experiences to boost your business. We want to inspire you
                 </motion.p>
             </div>
             <motion.div 

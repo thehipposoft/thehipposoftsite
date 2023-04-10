@@ -17,7 +17,7 @@ const Header = () => {
             viewport={{ once: true }}
         >
             <Image src={'/assets/logo.png'} alt={'Hipposoft Logo'} width={154} height={60} />
-            <Button label={'MENU'} />
+            <Button label={'Menu'} />
         </motion.div>
     )
 };
