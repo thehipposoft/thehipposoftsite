@@ -49,7 +49,51 @@ li {
 button {
   font-family: $baloo;
 }
+//This is Us
 
+.us-box {
+  transition: all 300ms ease-in-out;
+}
+
+.us-box::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $dark-blue;
+  opacity: 0.5;
+  transition: opacity 250ms ease-in-out;
+}
+
+.us-box:hover {
+  z-index: 10;
+  transform: scale(1.1);
+  cursor: pointer;
+
+  .us-box-tag {
+    opacity: 0;
+  }
+}
+
+.us-box:hover::after {
+  opacity: 0;
+}
+
+.us-box-tag {
+  position: absolute;
+  z-index: 5;
+  opacity: 100%;
+  transition: opacity 400ms ease-in-out;
+}
+
+.us-box-tag-line {
+  position: relative;
+  background-color: $lightblue;
+  height: 2px;
+  width: 40px;
+  padding-right: 5px;
+  transform: rotate(90deg)
+}
 
 //Technologies Styles
 
@@ -124,6 +168,74 @@ button {
   transition: all ease 300ms;
 }
 */
+
+//Dialog
+.dialog-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #7741EA;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+//Form
+.form {
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.item {
+  color: #000;
+}
+
+.input {
+  border-bottom: 2px solid #7653E3;
+  height: 20px;
+  width: 100%;
+  transition: 300ms;
+  background-color: transparent;
+  padding: 15px 5px;
+  font-family: $montserrat-regular;
+}
+
+.input.error {
+  border: 3px solid #cc0017;
+  background-color: #cc001712;
+  font-weight: 600;
+}
+
+.input_box {
+  border-bottom: 2px solid #7653E3;
+  padding: 10px 5px;
+  background-color: transparent;
+  height: 80%;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+}
+
+.input_box::placeholder {
+  font-size: 19px;
+}
+
+.contact-input-button {
+  font-family: $montserrat-regular;
+  background-color: $dark-blue;
+  border-radius: 20px;
+  margin-top: 10%;
+  border: 2px $dark-blue solid;
+  transition: all 300ms;
+
+  &:hover {
+      background-color: #fff;
+      color: $dark-blue;
+      border: 2px $dark-blue solid;
+  }
+}
+
 
 //Footer
 

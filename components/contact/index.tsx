@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 //Sytles
 import { motion } from 'framer-motion';
+import Button from '../common/Button';
+import ContactModal from './ContactModal';
 
 //Components
 
 
 const Contact = () => {
+
+    const [openModal, setOpenModal] = useState<boolean>(false);
+
     return(
         <div className='max-w-[1200px] m-auto flex flex-col items-center text-center justify-center h-screen'>
             <motion.h1
@@ -33,7 +38,12 @@ const Contact = () => {
                 }}
                 viewport={{ once: true }}
                 transition={{duration: 1, delay: 0.5}}
-            >We hope to meet each other very soon.</motion.p>
+                className='md:mb-8'
+            >
+                We hope to meet each other very soon.
+                </motion.p>
+            <Button label='Contact' onClick={() => {setOpenModal(true)}} />
+            <ContactModal open={openModal} closeModal={() => setOpenModal(false)} />
         </div>
     )
 }

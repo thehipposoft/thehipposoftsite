@@ -1,13 +1,19 @@
-import React from 'react';
-import Image from 'next/image';
-//Sytles
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-//Components
 import Button from '../common/Button'
+import Box from '../box';
+import ModalUs from './ModalUs';
+import { US_DATA } from './constants';
 
 const Us = () => {
+    
+    const [openModal, setOpenModal] = useState<boolean>(false);
+
+    const [selectedModalDataId, setSelectedModalDataId] = useState<number>(0);
+
+
     return(
-        <div className='flex justify-between max-w-[1200px] m-auto py-4'>
+        <div className='flex justify-between max-w-[1200px] m-auto py-4 md:h-screen'>
             <div className='flex flex-col justify-around md:w-3/12 mt-8 text-center md:text-left'>
                 <div>
                     <motion.h1 
@@ -73,12 +79,39 @@ const Us = () => {
                     <Button label='READ MORE ABOUT US' />
                 </motion.div>
             </div>
-            <div className='md:grid hidden grid-cols-2 w-7/12'>
-                <Image alt='a' src='/assets/images/us/us-image1.png' width={350} height={350}/>
-                <Image alt='a' src='/assets/images/us/us-image2.png' width={350} height={350}/>
-                <Image alt='a' src='/assets/images/us/us-image3.png' width={350} height={350}/>
-                <Image alt='a' src='/assets/images/us/us-image4.png' width={350} height={350}/>
+            <div className='md:grid hidden grid-cols-2'>
+                <Box 
+                    bg='/assets/images/us/us-design.png' 
+                    label='BRAND & DESIGN'
+                    onClick={() => {
+                        setSelectedModalDataId(0)
+                        setOpenModal(true)}
+                }
+                 />
+                <Box 
+                    bg='/assets/images/us/us-develop.png' 
+                    label='WEB DEVELOPMENT'
+                    onClick={() => {
+                        setSelectedModalDataId(1)
+                        setOpenModal(true)}
+                    }
+                 />
+                <Box 
+                    bg='/assets/images/us/us-seo.png'
+                    label='SEO'
+                    onClick={() => {
+                        setSelectedModalDataId(2)
+                        setOpenModal(true)}
+                    }
+                 />
+                <Box bg='/assets/images/us/us-design.png' label='BRAND & DESIGN' />
             </div>
+
+            <ModalUs open={openModal} closeModal={() => setOpenModal(false)} selectedSection={US_DATA[selectedModalDataId].section}>
+                <div>
+                    {US_DATA[selectedModalDataId].content}
+                </div>
+            </ModalUs>
         </div>
     )
 }
