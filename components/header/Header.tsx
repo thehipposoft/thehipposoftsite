@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -6,8 +6,17 @@ import { motion } from 'framer-motion';
 import Button from '../common/Button';
 //Styles
 import styles from './Header.module.scss';
+import SideMenu from '../sideMenu';
+import BackDrop from '../sideMenu/backDrop';
 
 const Header = () => {
+
+    const [sideMenu, setSideMenu] = useState(false);
+
+    const toggleSideMenu = () => {
+        setSideMenu((prevState) => !prevState)
+    }
+
     return (
         <motion.div 
             className={styles.container}
@@ -17,7 +26,9 @@ const Header = () => {
             viewport={{ once: true }}
         >
             <Image src={'/assets/logo.png'} alt={'Hipposoft Logo'} width={154} height={60} />
-            <Button label={'Menu'} />
+            <Button label={'Menu'} onClick={toggleSideMenu} />
+            <SideMenu sideMenu={sideMenu} />
+            <BackDrop sideMenu={sideMenu} closeSideMenu={toggleSideMenu}/>
         </motion.div>
     )
 };

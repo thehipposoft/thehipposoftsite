@@ -1,33 +1,18 @@
 const VALUES_DATA = [
     {
-        image: '/assets/images/values/value1.svg',
-        title: 'Brand recognition',
-        text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
+        image: '/assets/images/values/value_1.svg',
+        title: 'Branding and Design',
+        text: 'Where it all begins. Identity. Innovation. Unique',
     },
     {
-        image: '/assets/images/values/value2.svg',
-        title: 'Statistical improvements',
-        text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
+        image: '/assets/images/values/value_2.svg',
+        title: 'Web development',
+        text: 'Building is important but how is just as essential to us.',
     },
     {
-        image: '/assets/images/values/value3.svg',
-        title: 'Cybersecurity',
-        text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
-    },
-    {
-        image: '/assets/images/values/value4.svg',
-        title: 'Market Positioning',
-        text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
-    },
-    {
-        image: '/assets/images/values/value5.svg',
-        title: 'Growth in sales',
-        text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
-    },
-    {
-        image: '/assets/images/values/value6.svg',
-        title: 'Identity',
-        text: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet',
+        image: '/assets/images/values/value_3.svg',
+        title: 'Seo and Positioning',
+        text: 'A product that no one can see is meaningless. We focus on getting the company to the right audience through the right channels.',
     },
 ];
 

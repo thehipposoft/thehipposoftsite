@@ -24,7 +24,7 @@ const Proyects = () => {
                     Our projects
                 </motion.h1>
                 <motion.p 
-                    className='md:w-2/4 text-center mb-6 mt-4 md:mt-0'
+                    className='md:w-2/4 text-center mb-6 mt-4 md:mt-8'
                     initial={{
                         opacity: 0,
                         y: 50,
@@ -36,7 +36,7 @@ const Proyects = () => {
                     viewport={{ once: true }}
                     transition={{duration: 1, delay: 1.5}}
                 >
-                    A quick look to our lastest projects
+                    Feel free to discover each of them.
                 </motion.p>
             </div>
             <motion.div
@@ -50,6 +50,7 @@ const Proyects = () => {
                 }}
                 viewport={{ once: true }}
                 transition={{duration: 1, delay: 2}}
+                className="md:mt-8"
             >
                 <ProyectsCarousel proyects={PROYECTS_DATA}/>
             </motion.div>

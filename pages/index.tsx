@@ -7,8 +7,6 @@ import Banner from '../components/banner/Banner';
 import PickYourTrip from '../components/pickYourTrip/PickYourTrip';
 import Value from '../components/values';
 import Us from '../components/us';
-import Technologies from '../components/technologies';
-import Team from '../components/team';
 import Contact from '../components/contact';
 import Proyects from '../components/proyects';
 import Footer from '../components/footer';
@@ -24,14 +22,12 @@ export default function Home() {
 
             <main className={styles.main}>
                 <Header />
-                <div className={''}>
-                    <Banner />
-                    <PickYourTrip />
-                    <Value />
-                    <Us />
-                    <Proyects />
-                    <Contact />
-                </div>
+                <Banner />
+                <PickYourTrip />
+                <Value />
+                <Us />
+                <Proyects />
+                <Contact />
             </main>
 
             <footer className={styles.footer}>

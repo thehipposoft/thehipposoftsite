@@ -13,7 +13,7 @@ const Us = () => {
 
 
     return(
-        <div className='flex justify-between max-w-[1200px] m-auto py-4 md:h-screen'>
+        <div className='flex justify-between max-w-[1200px] md:mx-auto md:my-8 py-4 md:h-screen'>
             <div className='flex flex-col justify-around md:w-3/12 mt-8 text-center md:text-left'>
                 <div>
                     <motion.h1 
@@ -76,7 +76,9 @@ const Us = () => {
                     whileInView={{opacity: 1}}
                     transition={{duration: 1}}
                 >
-                    <Button label='READ MORE ABOUT US' />
+                    <Button label='READ MORE ABOUT US' onClick={() => {
+                        setSelectedModalDataId(0)
+                        setOpenModal(true)}}/>
                 </motion.div>
             </div>
             <div className='md:grid hidden grid-cols-2'>

@@ -29,7 +29,7 @@ const Value = () => {
     }
 
     return(
-        <div className='max-w-[1200px] m-auto'>
+        <div className='max-w-[1200px] md:mx-auto md:my-8 bg-[#021627]'>
             <div className='flex flex-col items-center text-center md:text-left my-4 md:my-0'>
                 <motion.h1
                     initial={{
@@ -61,7 +61,7 @@ const Value = () => {
                 </motion.p>
             </div>
             <motion.div 
-                className='grid md:grid-cols-3 grid-cols-1 gap-8'
+                className='grid md:grid-cols-3 grid-cols-1 gap-8 md:mt-16'
                 variants={parentVariants}
                 initial={'hidden'}
                 whileInView={'visible'}

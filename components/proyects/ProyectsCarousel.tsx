@@ -28,10 +28,26 @@ const ProyectsCarousel = ({ proyects }:any) => {
           className={`px-4 py-12 relative text-center ${activeIndex === index ? 'center-proyect z-10' : ''}`}
           style={{ width: 100 }}
         >
-          <a href={proyect.linkTo} rel='noreferrer' target={'_blank'} className={'proyect-display'}>
-            <h3 className='text-center text-2xl'>{proyect.title}</h3>
-            <img src={proyect.image} alt={`image ${index}`}/>
-          </a>
+          {
+            activeIndex === index ?
+              <a href={proyect.linkTo} rel='noreferrer' target={'_blank'} className={'proyect-display'}>
+                <h3 className='text-center text-2xl'>{proyect.title}</h3>
+                <img 
+                  src={proyect.image} 
+                  alt={`image ${index}`}
+                />
+              </a>
+            : 
+              <div className={'proyect-display'}>
+                <h3 className='text-center text-2xl'>{proyect.title}</h3>
+                <img 
+                  src={proyect.image} 
+                  alt={`image ${index}`}
+                />
+              </div>
+            
+          }
+
         </div>
       ))}
     </Slider>
