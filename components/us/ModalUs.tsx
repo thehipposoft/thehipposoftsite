@@ -1,7 +1,5 @@
 import React from 'react';
 import Dialog from '@mui/material/Dialog';
-import Image from 'next/image';
-
 
 type modalProps = {
     open: boolean,
@@ -16,7 +14,6 @@ const ModalUs = (
         children,
         closeModal,
     }:modalProps) => {
-
     const handleClose = () => {};
       
     return(
@@ -31,8 +28,13 @@ const ModalUs = (
                   },
             }}
         >
-            <div className={`bg-[#7741EA] `}>
-                <h3 onClick={closeModal} className='cursor-pointer absolute top-[8%] left-[40%] text-xl font-bold'>X</h3>
+            <div className={'bg-[#7741EA]'}>
+                <h3 
+                    onClick={closeModal} 
+                    className={'cursor-pointer absolute top-[2%] left-[42%] font-bold z-10 text-2xl'}
+                >
+                    X
+                </h3>
                 {children}
             </div>
         </Dialog>

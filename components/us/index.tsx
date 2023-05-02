@@ -5,12 +5,10 @@ import Box from '../box';
 import ModalUs from './ModalUs';
 import { US_DATA } from './constants';
 
-const Us = () => {
-    
+const Us = () => {    
     const [openModal, setOpenModal] = useState<boolean>(false);
-
     const [selectedModalDataId, setSelectedModalDataId] = useState<number>(0);
-
+    const [isSecondPageActive, setIsSecondPageActive] = useState<boolean>(false);
 
     return(
         <div className='flex justify-between max-w-[1200px] md:mx-auto md:my-8 py-4 md:h-screen'>
@@ -42,7 +40,7 @@ const Us = () => {
                     viewport={{ once: true }}
                     transition={{duration: 1, delay: 0.5}}
                     className='my-3'>
-                        We’re a team of passioned people from all over the world.
+                        We’re a team of passionate people from all over the world.
                         </motion.p>
                     <motion.p 
                     className='my-3'
@@ -109,9 +107,36 @@ const Us = () => {
                 <Box bg='/assets/images/us/us-design.png' label='BRAND & DESIGN' />
             </div>
 
-            <ModalUs open={openModal} closeModal={() => setOpenModal(false)} selectedSection={US_DATA[selectedModalDataId].section}>
-                <div>
-                    {US_DATA[selectedModalDataId].content}
+            <ModalUs 
+                open={openModal} 
+                closeModal={() => setOpenModal(false)} 
+                selectedSection={US_DATA[selectedModalDataId].section}
+            >
+                <div className={'relative'}>
+                    {
+                        isSecondPageActive 
+                        ? US_DATA[selectedModalDataId].secondPageContent
+                        : US_DATA[selectedModalDataId].content
+                    }
+                    {
+                        US_DATA[selectedModalDataId].withPagination && <div className={'absolute bottom-[30%] left-[40%]'}>
+                            {
+                                isSecondPageActive 
+                                ? <span 
+                                    onClick={() => setIsSecondPageActive(false)}
+                                    className={'text-white text-2xl cursor-pointer'}
+                                >
+                                    {`<<`}
+                                </span>
+                                : <span 
+                                    onClick={() => setIsSecondPageActive(true)}
+                                    className={'text-white text-2xl cursor-pointer'}
+                                >
+                                    {`>>`}
+                                </span> 
+                            }
+                        </div>
+                    }
                 </div>
             </ModalUs>
         </div>

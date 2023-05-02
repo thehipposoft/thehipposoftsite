@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Tile from "./tile";
 
 const BRAND = [
@@ -14,23 +13,19 @@ const BRAND = [
         image: '/assets/images/us/us-brand3.png',
         text: 'We standardize the diffusion of your brand for a correct use and application, through a manual of use.',
     },
-]
-
-const WEB = [
     {
-        image: '/assets/images/us/us-web1.png',
-        text: 'A good web design will attract more customers, a good experience on your site will make them stay.        ',
+        image: '/assets/images/us/us-brand3.png',
+        text: 'A good web design will attract more customers, a good experience on your site will make them stay.',
     },
     {
-        image: '/assets/images/us/us-web1.png',
+        image: '/assets/images/us/us-brand3.png',
         text: 'We design responsive sites according to the needs of each client and we design it with the latest tools so you can test it before it goes to market.',
     },
     {
-        image: '/assets/images/us/us-brand2.png',
+        image: '/assets/images/us/us-brand3.png',
         text: 'We design brands that inspire and last. We create websites that will make you grow.',
     },
-]
-
+];
 
 const DEV = [
     {
@@ -65,16 +60,15 @@ const SEO = [
         image: '/assets/images/us/us-seo3.png',
         text: 'We use BI tools to be able to control the traffic of the platform that our client chooses, in order to have greater certainty to be able to corroborate the implemented strategies.        ',
     },
-]
-
-
+];
 
 const US_DATA = [
     {
         id: 1,
         section: 'Brand',
+        withPagination: BRAND,
         content: <div className='w-full flex'>
-                    <div className="w-6/12 md:py-16">
+                    <div className="w-6/12">
                         <Tile 
                             title={'Brand Design'} 
                             text1={BRAND[0].text} img1={BRAND[0].image}
@@ -89,6 +83,22 @@ const US_DATA = [
                         <img src="/assets/images/us/us-design.png" alt="" className="" />
                     </div>
                 </div>,
+        secondPageContent: <div className='w-full flex'>
+        <div className="w-6/12">
+            <Tile 
+                title={'Brand Design'} 
+                text1={BRAND[3].text} img1={BRAND[3].image}
+                text2={BRAND[4].text} img2={BRAND[4].image}
+                text3={BRAND[5].text} img3={BRAND[5].image}
+            />
+        </div>
+        <div className="w-7/12 grid grid-cols-2 grid-rows-2">
+            <img src="/assets/images/us/us-design.png" alt="" className="" />
+            <img src="/assets/images/us/us-design.png" alt="" className="" />
+            <img src="/assets/images/us/us-design.png" alt="" className="" />
+            <img src="/assets/images/us/us-design.png" alt="" className="" />
+        </div>
+    </div>,
     },
     {
         id: 2,
