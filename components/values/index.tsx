@@ -29,7 +29,7 @@ const Value = () => {
     }
 
     return(
-        <div className='max-w-[1200px] md:mx-auto md:my-8'>
+        <div className='max-w-[1200px] md:mx-auto md:my-20'>
             <div className='flex flex-col items-center text-center md:text-left my-4 md:my-0'>
                 <motion.h1
                     initial={{

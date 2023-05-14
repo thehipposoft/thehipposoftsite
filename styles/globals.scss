@@ -8,6 +8,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -52,31 +53,54 @@ button {
 
 //sidemenu
 .sidemenu {
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: all 400ms ease-in-out;
   top: 0;
-  left: 0;
-  width: 18rem;
+  right: 0;
+  width: 20rem;
   position: absolute;
-  height: 80vh;
+  height: 100vh;
   background-color: #FFF;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   li {
     color: $dark-blue;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    border-radius: 10px;
+    padding: 5px 25px;
+
+    &:hover {
+      background-color: #291959;
+      color: #fff;
+    }
   }
 }
 
 .sidemenu-open {
-  transform: translateX(100%);
+
+  transform: translateX(0);
 }
 
 .backdrop {
   display: none;
+  position: absolute;
+  font-family: $montserrat-regular;
+  font-size: larger;
 }
 
 .backdrop-open {
   display: block;
   cursor: pointer;
+  z-index: 30;
+  right: 2%;
+  font-weight: bold;
 }
 
 //values
@@ -107,7 +131,7 @@ button {
 
 .us-box:hover {
   z-index: 10;
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 
   .us-box-tag {

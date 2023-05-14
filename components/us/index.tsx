@@ -11,7 +11,7 @@ const Us = () => {
     const [isSecondPageActive, setIsSecondPageActive] = useState<boolean>(false);
 
     return(
-        <div className='flex justify-between max-w-[1200px] md:mx-auto md:my-8 py-4 md:h-screen'>
+        <div className='flex justify-between max-w-[1200px] md:mx-auto md:my-20 py-4' id='us'>
             <div className='flex flex-col justify-around md:w-3/12 mt-8 text-center md:text-left'>
                 <div>
                     <motion.h1 
@@ -79,33 +79,50 @@ const Us = () => {
                         setOpenModal(true)}}/>
                 </motion.div>
             </div>
-            <div className='md:grid hidden grid-cols-2'>
-                <Box 
-                    bg='/assets/images/us/us-design.png' 
-                    label='BRAND & DESIGN'
-                    onClick={() => {
-                        setSelectedModalDataId(0)
-                        setOpenModal(true)}
-                }
-                 />
-                <Box 
-                    bg='/assets/images/us/us-develop.png' 
-                    label='WEB DEVELOPMENT'
-                    onClick={() => {
-                        setSelectedModalDataId(1)
-                        setOpenModal(true)}
-                    }
-                 />
-                <Box 
-                    bg='/assets/images/us/us-seo.png'
-                    label='SEO'
-                    onClick={() => {
-                        setSelectedModalDataId(2)
-                        setOpenModal(true)}
-                    }
-                 />
-                <Box bg='/assets/images/us/us-design.png' label='BRAND & DESIGN' />
-            </div>
+            <motion.div 
+                initial={{
+                    opacity: 0,
+                    x: 30,
+                    }}
+                whileInView={{
+                    opacity: 1,
+                    x: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{duration: 1, delay: 1.7}}
+                className='md:grid hidden grid-cols-2 grid-rows-2'
+            >
+                <div className='w-[300px] h-[325px]'>
+                    <Box 
+                        bg='/assets/images/us/us-design.png' 
+                        label='BRAND & DESIGN'
+                        onClick={() => {
+                            setSelectedModalDataId(0)
+                            setOpenModal(true)}
+                        }
+                    />
+                 </div>
+                <div className='w-[300px] h-[325px]'>
+                    <Box 
+                        bg='/assets/images/us/us-develop.png' 
+                        label='WEB DEVELOPMENT'
+                        onClick={() => {
+                            setSelectedModalDataId(1)
+                            setOpenModal(true)}
+                        }
+                    />
+                 </div>
+                <div className='col-span-2 w-[600px] h-[325px]'>
+                    <Box 
+                        bg='/assets/images/us/us-seo.png'
+                        label='SEO'
+                        onClick={() => {
+                            setSelectedModalDataId(2)
+                            setOpenModal(true)}
+                        }
+                    />
+                 </div>                
+            </motion.div>
 
             <ModalUs 
                 open={openModal} 
