@@ -14,7 +14,7 @@ const PROYECTS_DATA = [
     },
     {
        image: '/assets/images/proyects/proyects-rocksteady.png',
-       title: 'Rocks Steady',
+       title: 'Rock Steady',
        text: 'Example text',
        linkTo: 'https://www.rocksteadydigital.com.au/',
     },

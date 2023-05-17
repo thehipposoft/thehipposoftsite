@@ -29,12 +29,13 @@ const ModalUs = (
             }}
         >
             <div className={'bg-[#341c66]'}>
-                <h3 
+                <img 
+                    src='/assets/close-modal.png'
                     onClick={closeModal} 
-                    className={'cursor-pointer absolute top-[2%] left-[42%] font-bold z-10 text-2xl'}
+                    className={'cursor-pointer absolute top-[7%] left-[43%] font-bold z-10 text-2xl'}
                 >
-                    X
-                </h3>
+                    
+                </img>
                 {children}
             </div>
         </Dialog>

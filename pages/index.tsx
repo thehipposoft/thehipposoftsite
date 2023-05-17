@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.scss';
 //components
 import Header from '../components/header/Header';
 import Banner from '../components/banner/Banner';
-import PickYourTrip from '../components/pickYourTrip/PickYourTrip';
 import Value from '../components/values';
 import Us from '../components/us';
 import Contact from '../components/contact';
@@ -21,9 +20,7 @@ export default function Home() {
             </Head>
 
             <main className={`${styles.main}`}>
-                <Header />
                 <Banner />
-                <PickYourTrip />
                 <Value />
                 <Us />
                 <Proyects />

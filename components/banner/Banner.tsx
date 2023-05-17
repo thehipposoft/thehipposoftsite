@@ -1,14 +1,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Header from '../header/Header';
+
+
+/*
+
+<video
+                autoPlay
+                muted
+                loop
+                id={'video'}
+                className={styles.video}>
+                <source
+                    src={'/assets/images/video_header.mp4'}
+                    type={'video/mp4'}
+                />
+            </video>
+*/
 
 
 const Banner = () => {
     return (
         <div className='relative'>
+                <div className={'overlay'}/>
+                <Header />
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    id={'video'}
+                    className={'video'}>
+                    <source
+                        src={'/assets/banner-video.mp4'}
+                        type={'video/mp4'}
+                    />
+                </video>
             <motion.div 
                 initial={{opacity: 1}}
-                className={'flex flex-col justify-center items-center h-[90vh] overflow-hidden relative text-center md:text-left'}
-            >
+                className={'flex flex-col justify-center items-center h-[90vh] overflow-hidden relative text-center md:text-left z-10 md:pb-16'}
+            >   
                 <motion.h1
                     initial={{
                         opacity: 0,

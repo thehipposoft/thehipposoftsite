@@ -40,7 +40,7 @@ const Us = () => {
                     viewport={{ once: true }}
                     transition={{duration: 1, delay: 0.5}}
                     className='my-3'>
-                        We’re a team of passionate people from all over the world.
+                        We are a team of passionate people from all over the world.
                         </motion.p>
                     <motion.p 
                     className='my-3'
@@ -54,7 +54,8 @@ const Us = () => {
                     }}
                     viewport={{ once: true }}
                     transition={{duration: 1, delay: 0.5}}
-                    >We do what we love and we love what we do. </motion.p>
+                    >We are convinced that disruption is the key to success and that is why we are not afraid of challenges. 
+                    </motion.p>
                     <motion.p 
                     className='my-3'
                     initial={{
@@ -67,14 +68,15 @@ const Us = () => {
                     }}
                     viewport={{ once: true }}
                     transition={{duration: 1, delay: 0.5}}
-                    >Our everyday task is to make sure that you are 100% satisfied with the services and products that we provide.</motion.p>
+                    >We want to accompany you in the process of technological transformation of your business.
+                    </motion.p>
                 </div>
                 <motion.div 
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     transition={{duration: 1}}
                 >
-                    <Button label='READ MORE ABOUT US' onClick={() => {
+                    <Button label='READ MORE' onClick={() => {
                         setSelectedModalDataId(0)
                         setOpenModal(true)}}/>
                 </motion.div>
@@ -136,21 +138,21 @@ const Us = () => {
                         : US_DATA[selectedModalDataId].content
                     }
                     {
-                        US_DATA[selectedModalDataId].withPagination && <div className={'absolute bottom-[30%] left-[40%]'}>
+                        US_DATA[selectedModalDataId].withPagination && <div className={'absolute bottom-[15%] left-[43%]'}>
                             {
                                 isSecondPageActive 
-                                ? <span 
+                                ? <div 
                                     onClick={() => setIsSecondPageActive(false)}
                                     className={'text-white text-2xl cursor-pointer'}
                                 >
-                                    {`<<`}
-                                </span>
-                                : <span 
+                                    <img src='/assets/next-arrows.png' className='rotate-180' />
+                                </div>
+                                : <div 
                                     onClick={() => setIsSecondPageActive(true)}
                                     className={'text-white text-2xl cursor-pointer'}
                                 >
-                                    {`>>`}
-                                </span> 
+                                    <img src='/assets/next-arrows.png'  />
+                                </div> 
                             }
                         </div>
                     }
