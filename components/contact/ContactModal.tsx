@@ -30,7 +30,7 @@ const ContactModal = (
             }}
         >
             <div className={`md:py-8 md:px-2`}>
-                <h3 onClick={closeModal} className='cursor-pointer absolute top-[8%] left-[40%] text-xl font-bold'>X</h3>
+                <img onClick={closeModal} className='cursor-pointer absolute top-[12%] right-[6rem]' src='/assets/close-menu.png'/>
                 <div className='flex justify-around'>
                     <div className='w-[40%] flex md:flex-col justify-center md:pl-12 md:pt-8'>
                         <h1 className='text-6xl md:mb-12'>Let´s take the next step!</h1>
@@ -38,28 +38,29 @@ const ContactModal = (
                         <a className='contact-link'><img src='/assets/images/form/form-2.png' className='mr-4'/><p>+61 414 286 242</p></a>
                         <a className='contact-link'><img src='/assets/images/form/form-3.png' className='mr-4'/><p>Melbourne, Australia</p></a>
                     </div>
-                    <div className='w-[45%]'>
+                    <div className='w-[45%] bg-[#fff] rounded-xl md:p-4'>
+                        <p className='text-[#2E0249] font-semibold md:p-[20px]'>Im interested in...</p> 
                         <Form 
                             fields={[
                                 {
                                     name: 'name',
                                     type: 'text',
                                     label: '',
-                                    placeholder: 'Name',
+                                    placeholder: 'Your name',
                                     validations: [required]
                                 },
                                 {
                                     name: 'customerEmail',
                                     type: 'text',
                                     label: '',
-                                    placeholder: 'Email',
+                                    placeholder: 'Your email',
                                     validations: [required, email]
                                 },
                                 {
                                     name: 'message',
                                     type: 'textArea',
                                     label: '',
-                                    placeholder: 'Message',
+                                    placeholder: 'Your message',
                                     validations: [required]
                                 },
                             ]}

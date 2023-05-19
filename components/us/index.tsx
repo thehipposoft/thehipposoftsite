@@ -11,7 +11,7 @@ const Us = () => {
     const [isSecondPageActive, setIsSecondPageActive] = useState<boolean>(false);
 
     return(
-        <div className='flex justify-between max-w-[1200px] md:mx-auto md:my-20 py-4' id='us'>
+        <div className='flex justify-between max-w-[1200px] md:mx-auto my-20 py-4' id='us'>
             <div className='flex flex-col justify-around md:w-3/12 mt-8 text-center md:text-left'>
                 <div>
                     <motion.h1 
@@ -39,11 +39,11 @@ const Us = () => {
                     }}
                     viewport={{ once: true }}
                     transition={{duration: 1, delay: 0.5}}
-                    className='my-3'>
+                    className='my-3 px-6 md:px-0'>
                         We are a team of passionate people from all over the world.
                         </motion.p>
                     <motion.p 
-                    className='my-3'
+                    className='my-3 px-6 md:px-0'
                     initial={{
                         opacity: 0,
                         y: 50,
@@ -57,7 +57,7 @@ const Us = () => {
                     >We are convinced that disruption is the key to success and that is why we are not afraid of challenges. 
                     </motion.p>
                     <motion.p 
-                    className='my-3'
+                    className='my-3 px-6 md:px-0 mb-6 md:mb-0'
                     initial={{
                         opacity: 0,
                         y: 50,

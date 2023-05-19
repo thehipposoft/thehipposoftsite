@@ -5,8 +5,8 @@ const Footer = () => {
         <div>
             <div className='flex flex-col md:flex-row md:justify-around pt-20'>
                 <div className='flex flex-col px-4 py-8 md:px-0 md:py-0'>
-                    <img src={'/assets/logo.png'} alt={'Hipposoft Logo'}  />
-                    <img src={'/assets/footer-text.png'} alt={'More than softwere'}/>
+                    <img src={'/assets/logo.png'} alt={'Hipposoft Logo'} className='md:w-auto w-3/5 md:mx-0 mx-auto' />
+                    <img src={'/assets/footer-text.png'} alt={'More than softwere'} className='md:w-auto w-4/5 md:mx-0 mx-auto'/>
                 </div>
                 <div className='flex flex-col md:flex-row justify-around md:w-[60%] footer-links'>
                     <ul className='mx-10 my-5 md:my-0'>

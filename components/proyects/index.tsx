@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const Proyects = () => {
     return(
         <div className='max-w-[1250px] mx-auto py-12'>
-            <div className='flex flex-col items-center text-center md:text-left'>
+            <div className='flex flex-col items-center text-center md:text-left' id='projects'>
                 <motion.h1
                     initial={{
                         opacity: 0,

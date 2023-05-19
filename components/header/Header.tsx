@@ -27,7 +27,7 @@ const Header = () => {
         >
             <Image src={'/assets/logo.png'} alt={'Hipposoft Logo'} width={154} height={60} />
             <Button label={'Menu'} onClick={toggleSideMenu} />
-            <SideMenu sideMenu={sideMenu} />
+            <SideMenu sideMenu={sideMenu} closeSideMenu={toggleSideMenu}/>
             <BackDrop sideMenu={sideMenu} closeSideMenu={toggleSideMenu}/>
         </motion.div>
     )
