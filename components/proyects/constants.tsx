@@ -7,14 +7,14 @@ const PROYECTS_DATA = [
     },
     {
        image: '/assets/images/proyects/proyects-james.png',
-       title: 'Conrad Architect',
+       title: 'James Conrad Architect',
        text: 'Example text',
        linkTo: 'https://www.conradarchitect.com/',
 
     },
     {
        image: '/assets/images/proyects/proyects-rocksteady.png',
-       title: 'Rock Steady',
+       title: 'Rock Steady Digital',
        text: 'Example text',
        linkTo: 'https://www.rocksteadydigital.com.au/',
     },

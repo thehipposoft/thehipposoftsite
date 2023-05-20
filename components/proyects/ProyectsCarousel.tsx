@@ -45,9 +45,8 @@ const ProyectsCarousel = ({ proyects }:any) => {
                   alt={`image ${index}`}
                 />
               </div>
-            
           }
-
+          <p className='absolute top-[50%] left-[41%] p-1 shadow-2xl'>Discover</p>
         </div>
       ))}
     </Slider>
