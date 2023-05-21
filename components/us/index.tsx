@@ -128,7 +128,10 @@ const Us = () => {
 
             <ModalUs 
                 open={openModal} 
-                closeModal={() => setOpenModal(false)} 
+                closeModal={() => {
+                    setOpenModal(false);
+                    setIsSecondPageActive(false);
+                }} 
                 selectedSection={US_DATA[selectedModalDataId].section}
             >
                 <div className={'relative'}>

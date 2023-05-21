@@ -37,7 +37,7 @@ const Banner = () => {
                 </video>
             <motion.div 
                 initial={{opacity: 1}}
-                className={'flex flex-col justify-center items-center h-[90vh] overflow-hidden relative text-center md:text-left z-[2] md:pb-16'}
+                className={'flex flex-col justify-center items-center h-[90vh] overflow-hidden relative text-center md:text-left z-[2] md:pb-16 banner-opacity'}
             >   
                 <motion.h1
                     initial={{
