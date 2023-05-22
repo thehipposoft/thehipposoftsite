@@ -11,7 +11,7 @@ const Us = () => {
     const [isSecondPageActive, setIsSecondPageActive] = useState<boolean>(false);
 
     return(
-        <div className='md:flex justify-between max-w-[1200px] md:mx-auto my-20 py-4' id='us'>
+        <div className='md:flex justify-between max-w-[1200px] md:mx-auto my-20 py-4 overflow-hidden' id='us'>
             <div className='flex flex-col justify-around md:w-3/12 mt-8 text-center md:text-left'>
                 <div>
                     <motion.h1 
