@@ -67,8 +67,8 @@ const US_DATA = [
         id: 1,
         section: 'Brand',
         withPagination: BRAND,
-        content: <div className='w-full flex'>
-                    <div className="w-6/12 md:pt-16">
+        content: <div className='w-full md:flex'>
+                    <div className="md:w-6/12 md:pt-16 py-12 md:py-0">
                         <Tile 
                             title={'Brand Design'} 
                             text1={BRAND[0].text} img1={BRAND[0].image}
@@ -76,15 +76,15 @@ const US_DATA = [
                             text3={BRAND[2].text} img3={BRAND[2].image}
                         />
                     </div>
-                    <div className="grid grid-cols-2 grid-rows-2 bg-black">
+                    <div className="md:grid grid-cols-2 grid-rows-2 bg-black hidden">
                         <img src="/assets/images/us/us-design.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
                         <img src="/assets/images/us/brand-2.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
                         <img src="/assets/images/us/brand-3.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
                         <img src="/assets/images/us/brand-4.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
                     </div>
                 </div>,
-        secondPageContent: <div className='w-full flex '>
-        <div className="w-6/12 md:pt-16">
+        secondPageContent: <div className='w-full md:flex'>
+        <div className="md:w-6/12 md:pt-16 py-12 md:py-0">
             <Tile 
                 title={'Web Design'} 
                 text1={BRAND[3].text} img1={DEV[0].image}
@@ -92,7 +92,7 @@ const US_DATA = [
                 text3={BRAND[5].text} img3={DEV[2].image}
             />
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 bg-black">
+        <div className="md:grid grid-cols-2 grid-rows-2 bg-black hidden">
             <img src="/assets/images/us/web-1.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
             <img src="/assets/images/us/web-2.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
             <img src="/assets/images/us/web-3.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
@@ -103,8 +103,8 @@ const US_DATA = [
     {
         id: 2,
         section: 'Development',
-        content: <div className='w-full flex'>
-                    <div className="w-6/12 md:pt-12">
+        content: <div className='w-full md:flex'>
+                    <div className="md:w-6/12 md:pt-16 py-12 md:py-0">
                         <Tile 
                             title={'Web Development'} 
                             text1={DEV[0].text} img1={DEV[0].image}
@@ -113,7 +113,7 @@ const US_DATA = [
                             text4={DEV[3].text} img4={DEV[3].image}
                         />
                     </div>
-                    <div className="grid grid-cols-2 grid-rows-2 bg-black">
+                    <div className="md:grid grid-cols-2 grid-rows-2 bg-black hidden">
                         <img src="/assets/images/us/dev-1.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
                         <img src="/assets/images/us/dev-2.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
                         <img src="/assets/images/us/dev-3.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
@@ -124,8 +124,8 @@ const US_DATA = [
     {
         id: 3,
         section: 'Seo',
-        content: <div className='w-full flex'>
-                    <div className="w-6/12 md:pt-16">
+        content: <div className='w-full md:flex'>
+                    <div className="md:w-6/12 md:pt-16 py-12 md:py-0">
                         <Tile 
                             title={'SEO and positioning'} 
                             text1={SEO[0].text} img1={SEO[0].image}
@@ -133,7 +133,7 @@ const US_DATA = [
                             text3={SEO[2].text} img3={SEO[2].image}
                         />
                     </div>
-                    <div className="grid grid-cols-2 grid-rows-2 bg-black">
+                    <div className="md:grid grid-cols-2 grid-rows-2 bg-black hidden">
                         <img src="/assets/images/us/seo-1.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
                         <img src="/assets/images/us/seo-2.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />
                         <img src="/assets/images/us/seo-3.png" alt="" className="md:w-[300px] md:h-[290px] opacity-60 hover:opacity-100 duration-500 ease-in-out" />

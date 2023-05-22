@@ -28,13 +28,12 @@ const ModalUs = (
                   },
             }}
         >
-            <div className={'bg-[#341c66]'}>
+            <div className={'us-modal'}>
                 <img 
                     src='/assets/close-modal.png'
                     onClick={closeModal} 
-                    className={'cursor-pointer absolute top-[7%] left-[43%] font-bold z-10 text-2xl'}
+                    className={'cursor-pointer absolute md:top-[7%] md:left-[43%] left-[80%] top-5 font-bold z-10 text-2xl'}
                 >
-                    
                 </img>
                 {children}
             </div>

@@ -11,7 +11,7 @@ const Us = () => {
     const [isSecondPageActive, setIsSecondPageActive] = useState<boolean>(false);
 
     return(
-        <div className='flex justify-between max-w-[1200px] md:mx-auto my-20 py-4' id='us'>
+        <div className='md:flex justify-between max-w-[1200px] md:mx-auto my-20 py-4' id='us'>
             <div className='flex flex-col justify-around md:w-3/12 mt-8 text-center md:text-left'>
                 <div>
                     <motion.h1 
@@ -92,9 +92,9 @@ const Us = () => {
                 }}
                 viewport={{ once: true }}
                 transition={{duration: 1, delay: 1.7}}
-                className='md:grid hidden grid-cols-2 grid-rows-2'
+                className='md:grid mt-12 md:mt-0 mx-auto md:mx-0 grid-cols-2 grid-rows-2'
             >
-                <div className='w-[300px] h-[325px]'>
+                <div className='md:w-[300px] w-80 mx-auto md:mx-0 md:h-[325px]'>
                     <Box 
                         bg='/assets/images/us/us-design.png' 
                         label='BRAND & DESIGN'
@@ -104,7 +104,7 @@ const Us = () => {
                         }
                     />
                  </div>
-                <div className='w-[300px] h-[325px]'>
+                <div className='md:w-[300px] w-80 mx-auto md:mx-0 md:h-[325px]'>
                     <Box 
                         bg='/assets/images/us/us-develop.png' 
                         label='WEB DEVELOPMENT'
@@ -114,7 +114,7 @@ const Us = () => {
                         }
                     />
                  </div>
-                <div className='col-span-2 w-[600px] h-[325px]'>
+                <div className='col-span-2 md:w-[600px] w-80 mx-auto md:mx-0 md:h-[325px]'>
                     <Box 
                         bg='/assets/images/us/us-seo.png'
                         label='SEO'
@@ -141,7 +141,7 @@ const Us = () => {
                         : US_DATA[selectedModalDataId].content
                     }
                     {
-                        US_DATA[selectedModalDataId].withPagination && <div className={'absolute bottom-[15%] left-[43%]'}>
+                        US_DATA[selectedModalDataId].withPagination && <div className={'absolute md:bottom-[15%] bottom-5 md:left-[43%] left-[80%]'}>
                             {
                                 isSecondPageActive 
                                 ? <div 

@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const ProyectsCarousel = ({ proyects }:any) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const settings = {
+  var settings = {
     infinite: true,
     speed: 500,
     autoplay: true,
@@ -17,6 +17,32 @@ const ProyectsCarousel = ({ proyects }:any) => {
     dots: true,
     centerMode: true,
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ],
     afterChange: (index) => setActiveIndex(index),
   };
 
@@ -31,7 +57,7 @@ const ProyectsCarousel = ({ proyects }:any) => {
           {
             activeIndex === index ?
               <a href={proyect.linkTo} rel='noreferrer' target={'_blank'} className={'proyect-display'}>
-                <h3 className='text-center text-2xl'>{proyect.title}</h3>
+                <h3 className='text-center md:text-2xl'>{proyect.title}</h3>
                 <img 
                   src={proyect.image} 
                   alt={`image ${index}`}
@@ -39,14 +65,14 @@ const ProyectsCarousel = ({ proyects }:any) => {
               </a>
             : 
               <div className={'proyect-display'}>
-                <h3 className='text-center text-2xl'>{proyect.title}</h3>
+                <h3 className='text-center md:text-2xl'>{proyect.title}</h3>
                 <img 
                   src={proyect.image} 
                   alt={`image ${index}`}
                 />
               </div>
           }
-          <p className='absolute top-[50%] left-[41%] p-1 shadow-2xl'>Discover</p>
+          <p className='absolute top-[50%] md:left-[41%] left-[35%] p-1 shadow-2xl'>Discover</p>
         </div>
       ))}
     </Slider>

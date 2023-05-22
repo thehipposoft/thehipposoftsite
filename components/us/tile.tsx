@@ -27,20 +27,20 @@ const Tile = ({
 }:TileProps) => {
     return(
         <div>
-            <h1 className="text-center text-5xl font-[$baloo] my-8">{title}</h1>
-                <div className="flex items-center md:mt-4">
+            <h1 className="text-center md:text-5xl text-3xl font-[$baloo] my-8">{title}</h1>
+                <div className="flex items-center md:mt-4 mt-6">
                     <img src={img1} alt="" className="bg-[#02223B] p-4 rounded-lg rounded-l-none min-w-[85px] max-h-[80px] object-contain"/>
                     <p className="px-4 md:w-[70%]">{text1}</p>
                 </div>
-                <div className="flex items-center md:mt-4">
+                <div className="flex items-center md:mt-4 mt-6">
                     <img src={img2} alt="" className="bg-[#02223B] p-4 rounded-lg rounded-l-none min-w-[85px] max-h-[80px] object-contain"/>
                     <p className="px-4 md:w-[70%]">{text2}</p>
                 </div>
-                <div className="flex items-center md:mt-4">
+                <div className="flex items-center md:mt-4 mt-6">
                     <img src={img3} alt="" className="bg-[#02223B] p-4 rounded-lg rounded-l-none min-w-[85px] max-h-[80px] object-contain"/>
                     <p className="px-4 md:w-[70%]">{text3}</p>
                 </div>
-                <div className={`${img4 ? 'flex items-center md:mt-4' : 'hidden'}`}>
+                <div className={`${img4 ? 'flex items-center md:mt-4 mt-6' : 'hidden'}`}>
                     <img src={img4} alt="" className="bg-[#02223B] p-4 rounded-lg rounded-l-none min-w-[85px] max-h-[80px] object-contain"/>
                     <p className="pl-4 md:w-[70%]">{text4}</p>
                 </div>

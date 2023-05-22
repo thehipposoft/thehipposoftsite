@@ -192,6 +192,12 @@ button {
 
 //Us modal
 
+.us-modal {
+  background-color: $dark-blue;
+  background-image: url('/assets/images/home/is_us_bg.png');
+  background-size: cover;
+  background-position: 5% 25%;
+}
 
 //Technologies Styles
 
@@ -256,7 +262,14 @@ button {
 .slick-next {
   right: 30px;
 }
+//Contact modal
 
+.contact-modal {
+  background-color: $dark-blue;
+  background-image: url('/assets/images/home/is_us_bg.png');
+  background-size: cover;
+  background-position: 5% 25%;
+}
 
 //Contact{
 .hippo-bg {
