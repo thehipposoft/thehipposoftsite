@@ -23,7 +23,7 @@ const Footer = () => {
                         <li className='pt-4'><a href="">Deploy</a></li>
                         <li className='pt-4'><a href="">Manteinance</a></li>
                     </ul>
-                    <ul className='mx-10 my-5 md:my-0'>
+                    <ul className='mx-10 my-5 md:my-0 hidden'>
                         <li className='font-semibold'>Contact</li>
                         <li className='pt-4'><a href="">hipposoft@gmail.com</a></li>
                     </ul>

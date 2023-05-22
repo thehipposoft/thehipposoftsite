@@ -34,7 +34,7 @@ const ContactModal = (
                 <div className='flex justify-around'>
                     <div className='w-[40%] flex md:flex-col justify-center md:pl-12 md:pt-8'>
                         <h1 className='text-6xl md:mb-12'>Let´s take the next step!</h1>
-                        <a className='contact-link'><img src='/assets/images/form/form-1.png' className='mr-4'/><p>Hipposoft@gmail.com</p></a>
+                        <a className='contact-link hidden'><img src='/assets/images/form/form-1.png' className='mr-4 hidden'/><p className='hidden'>Hipposoft@gmail.com</p></a>
                         <a className='contact-link'><img src='/assets/images/form/form-2.png' className='mr-4'/><p>+61 414 286 242</p></a>
                         <a className='contact-link'><img src='/assets/images/form/form-3.png' className='mr-4'/><p>Melbourne, Australia</p></a>
                     </div>
