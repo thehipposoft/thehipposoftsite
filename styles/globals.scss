@@ -368,3 +368,15 @@ button {
     }
   }
 }
+
+@media (max-width: 600px) {
+  .contact-link {
+    margin: 12px 0;
+    padding-left: 15%;
+  }
+
+  .contact-input-button {
+    margin-top: 20%;
+  }
+}
+

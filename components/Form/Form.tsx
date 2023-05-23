@@ -150,7 +150,7 @@ const MyCustomForm = ({
                 })
             }
             {renderSentMessage()}
-            <section className={`${styles.item} text-center flex justify-end`}>
+            <section className={`${styles.item} text-center flex md:justify-end justify-center`}>
                 <input
                     type={'submit'}
                     value={submitButtonLabel ? submitButtonLabel : 'SEND'}

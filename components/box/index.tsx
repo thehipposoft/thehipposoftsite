@@ -10,7 +10,7 @@ type gridProps = {
 const Box = ({bg, label, onClick}:gridProps) => {
     return(
         <div 
-            className="flex items-end us-box mx-auto md:mx-0 relative my-5 md:my-0 h-[200px]"
+            className="flex items-end us-box mx-auto md:mx-0 relative my-5 md:my-0 md:h-[325px] h-[200px]"
             onClick={onClick}
         >
             <img src={bg} className="md:h-[325px] h-[200px] w-full"/>
