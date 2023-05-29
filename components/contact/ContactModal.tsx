@@ -2,6 +2,7 @@ import React from 'react';
 import Dialog from '@mui/material/Dialog';
 import { Form } from '../Form';
 import { required, email } from './fieldValidations';
+import Button from '../common/Button';
 
 
 type modalProps = {
@@ -39,7 +40,7 @@ const ContactModal = (
                         <a className='contact-link'><img src='/assets/images/form/form-3.png' className='mr-4'/><p>Melbourne, Australia</p></a>
                     </div>
                     <div className='md:w-[45%] bg-[#fff] rounded-xl p-4 mt-4 md:mt-0'>
-                        <p className='text-[#2E0249] font-semibold md:p-[20px]'>Im interested in...</p> 
+                        <p className='text-[#2E0249] font-semibold md:pt-[20px] md:pl-[20px]'>Im interested in...</p> 
                         <Form 
                             fields={[
                                 {
@@ -66,7 +67,7 @@ const ContactModal = (
                             ]}
                             onSuccessMessage={'Your message was sent successfully. We will contact you as soon as possible.'}
                             onErrorMessage={'Please try again in a few minutes.'}
-                            submitButtonLabel={'Send message'}
+                            submitButtonLabel={'Send message!'}
                             emailServiceURL={'https://thehippoapi.netlify.app/.netlify/functions/api/diversity-email'}
                         />
                     </div>

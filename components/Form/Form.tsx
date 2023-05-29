@@ -6,6 +6,12 @@ import useContactForm from './useContactForm';
 //Component
 import MyInput from './CustomInput';
 import styles from './form.module.scss';
+import Button from '../common/Button';
+
+
+const INTEREST_ARRAY = ['Web Design', 'SEO', 'Graphic Design', 'Branding', 'Other'];
+
+let SELECTED_INTEREST = [];
 
 const MyCustomForm = ({
     fields,
@@ -18,6 +24,7 @@ const MyCustomForm = ({
     const [messageSent, setMessageSent] = useState('');
     const [isAPILoading, setIsAPILoading] = useState(false);
     const [messageDescription, setMessageDescription] = useState('');
+    const [selectedInterest, setSelectedInterest] = useState([]);
     const initialValues = {
         name: '',
         customerEmail: '',
@@ -42,6 +49,7 @@ const MyCustomForm = ({
                     message: values.message,
                     name: values.name,
                     phone: values.phone,
+                    interest: selectedInterest.join('- '),
                     customerEmail: values.customerEmail,
                 },
                 {
@@ -81,12 +89,37 @@ const MyCustomForm = ({
         return null;
     };
 
+    const handleInterest = (interest:string) => {
+        const newArray = [...selectedInterest]
+        const index = newArray.indexOf(interest)
+        if (index === -1) {
+            newArray.push(interest)
+        } else {
+            newArray.splice(index, 1)
+        }
+        setSelectedInterest(newArray)
+        console.log(newArray)
+    }
+
+    const isInterestActive = (interest:string) => selectedInterest.find((i) => i === interest)
+
     return (
         <form 
             className={`form ${customClass}`}
             onSubmit={(event) => handleSubmit(event)}
-            style={{marginTop: '40px'}}
         >
+            <div className='flex flex-wrap mb-4'>
+                {
+                    INTEREST_ARRAY.map((value) => 
+                    <div 
+                            className={`interest ${isInterestActive(value) ? 'text-white bg-[#291959]' : 'bg-white opacity-50 border-neutral-500'}`}
+                            onClick={() => handleInterest(value)}
+                            key={value}
+                    >
+                        {value}
+                    </div>)
+                }
+            </div>
             {
                 fields.map((field:any)=> {
                     const { name, type, label, validations, selectOptions, size, placeholder } = field;
@@ -150,11 +183,11 @@ const MyCustomForm = ({
                 })
             }
             {renderSentMessage()}
-            <section className={`${styles.item} text-center flex md:justify-end justify-center`}>
+            <section className={`${styles.btn} text-white text-center`}>
                 <input
                     type={'submit'}
                     value={submitButtonLabel ? submitButtonLabel : 'SEND'}
-                    className={`contact-input-button py-2 px-7 text-white cursor-pointer relative bottom-6 ${isAPILoading ? 'opacity-50' : ''}`}
+                    className={`${isAPILoading ? 'opacity-50' : ''}`}
                     disabled={isAPILoading}
                 />
             </section>

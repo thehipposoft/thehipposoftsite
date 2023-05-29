@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .form {
     display: flex;
     flex-wrap: wrap;
@@ -14,6 +16,7 @@
     height: 40px;
     width: 100%;
     transition: 300ms;
+    padding: 8px 4px;
 }
 
 .input.error {
@@ -59,6 +62,50 @@
     border: 2px solid #33a533;
 }
 
+
+.btn {
+    outline: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 25px;
+    background: $linear;
+    cursor: pointer;
+    border-radius: 48px;
+    padding: 12px 30px;
+    border: 1px solid transparent;
+    width: 35%;
+    margin-top: 10px;
+  }
+  
+  
+  .btn::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+    border-radius: 25px;
+    background-color: $button-color;
+    z-index: -1;
+    transition: 400ms;
+  }
+  
+  .btn::after {
+    content: attr(data);
+    font-size: 16px;
+    background: $linear;
+    background-clip: text;
+    color: transparent;
+    transition: 400ms;
+  }
+  
+  
+  .btn:hover::before {
+    opacity: 0;
+  }
+  
+
 @media (max-width: 480px) {
     .item, .item.half { width: 100%; }
 
@@ -67,5 +114,9 @@
         width: 50vw;
         display: block;
         margin: auto;
+    }
+
+    .btn {
+        width: auto;
     }
 }
