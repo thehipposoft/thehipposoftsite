@@ -66,7 +66,7 @@ const ContactModal = (
                             onSuccessMessage={'Your message was sent successfully. We will contact you as soon as possible.'}
                             onErrorMessage={'Please try again in a few minutes.'}
                             submitButtonLabel={'Send message!'}
-                            emailServiceURL={'https://thehippoapi.netlify.app/.netlify/functions/api/diversity-email'}
+                            emailServiceURL={'https://thehippoapi.netlify.app/.netlify/functions/api/hipposoft-email'}
                         />
                     </div>
                 </div>

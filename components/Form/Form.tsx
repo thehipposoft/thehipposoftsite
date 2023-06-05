@@ -49,7 +49,7 @@ const MyCustomForm = ({
                     message: values.message,
                     name: values.name,
                     phone: values.phone,
-                    interest: selectedInterest.join('- '),
+                    interest: selectedInterest.join(' - '),
                     customerEmail: values.customerEmail,
                 },
                 {
@@ -81,9 +81,9 @@ const MyCustomForm = ({
         }
         if (messageSent === 'error') {
             return <div className={`message error w-full text-center mb-6`}>
-                <h2 className={'mb-4 text-red-500'}>Algo salió mal</h2>
-                <p>{onErrorMessage}</p>
-                <p>{messageDescription}</p>
+                <h3 className={'mb-4 text-red-500'}>Something went wrong</h3>
+                <p className={'text-red-500'}>{onErrorMessage}</p>
+                <p className={'text-red-500'}>{messageDescription}</p>
             </div>
         }
         return null;
