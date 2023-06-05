@@ -2,8 +2,6 @@ import React from 'react';
 import Dialog from '@mui/material/Dialog';
 import { Form } from '../Form';
 import { required, email } from './fieldValidations';
-import Button from '../common/Button';
-
 
 type modalProps = {
     open: boolean,

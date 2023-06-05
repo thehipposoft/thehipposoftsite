@@ -1,14 +1,10 @@
 import React, {useState} from 'react';
-//Sytles
+//Components
 import { motion } from 'framer-motion';
 import Button from '../common/Button';
 import ContactModal from './ContactModal';
 
-//Components
-
-
 const Contact = () => {
-
     const [openModal, setOpenModal] = useState<boolean>(false);
 
     return(
