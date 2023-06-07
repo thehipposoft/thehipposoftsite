@@ -28,7 +28,7 @@ const ContactModal = (
                   },
             }}
         >
-            <div className={`md:py-8 md:px-2 contact-modal`}>
+            <div className={'md:py-8 md:px-2 background'}>
                 <img onClick={closeModal} className='cursor-pointer absolute md:top-[12%] top-[52%] md:right-[6rem] right-[10%]' src='/assets/close-menu.png'/>
                 <div className='flex flex-col md:flex-row justify-around'>
                     <div className='md:w-[40%] flex flex-col justify-center md:pl-12 pt-8 pb-12 md:pb-0'>

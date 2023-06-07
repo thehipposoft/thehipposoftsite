@@ -190,15 +190,6 @@ button {
   transform: rotate(90deg)
 }
 
-//Us modal
-
-.us-modal {
-  background-color: $dark-blue;
-  background-image: url('/assets/images/home/is_us_bg.png');
-  background-size: cover;
-  background-position: 5% 25%;
-}
-
 //Technologies Styles
 
 .card-image {
@@ -227,6 +218,14 @@ button {
 }
 
 //Carousel styles 
+
+.proyect-display {
+  width: 375px;
+  background-color: $dark-blue;
+  opacity: 0.3;
+  transition: all 300ms ease-in-out;
+}
+
 .right {
   right: 0;
 }
@@ -237,7 +236,7 @@ button {
   
 
   .proyect-display {
-    opacity: 0.65;
+    opacity: 0.7;
   }
 
   img {
@@ -253,28 +252,13 @@ button {
   }
 }
 
-.proyect-display {
-  background-color: $dark-blue;
-  opacity: 0.3;
-  transition: all 300ms ease-in-out;
-}
 
 .slick-next {
   right: 30px;
 }
-//Contact modal
-
-.contact-modal {
-  background-color: $dark-blue;
-  background-image: url('/assets/images/home/is_us_bg.png');
-  background-size: cover;
-  background-position: 5% 25%;
-}
 
 //Contact{
-.hippo-bg {
-  background-image: url('/public/assets/hippo-img.png') !important;
-}
+
 
 .dialog-bg {
   position: absolute;
@@ -379,6 +363,26 @@ button {
   }
 }
 
+//lights background
+
+.background { 
+  background-image: url('/assets/main-background.png');
+  background-size: cover;
+}
+
+.background2 {
+  background-color: $dark-blue;
+  background-image: url('/assets/images/home/is_us_bg.png');
+  background-size: cover;
+  background-position: 5% 33%;
+}
+
+.hippo-bg {
+  background-image: url('/assets/hippo-img.png') !important;
+  background-color: $dark-blue;
+  background-position: top center;
+}
+
 @media (max-width: 600px) {
   .contact-link {
     margin: 12px 0;
@@ -387,6 +391,10 @@ button {
 
   .contact-input-button {
     margin-top: 20%;
+  }
+
+  .proyect-display {
+    width: 250px;
   }
 }
 

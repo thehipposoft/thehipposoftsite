@@ -66,7 +66,7 @@ const Banner = () => {
                     className={'md:w-[470px] w-9/12 md:text-center pt-2'}
                 >
                     
-                    We communicate. we connect, we are in constant motion. 
+                    We communicate. We connect, we are in constant motion. 
                     We don't follow the rules because we come to innovate.
                     We want you to be part of this.
                 </motion.p>
