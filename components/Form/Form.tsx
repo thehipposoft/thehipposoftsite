@@ -28,7 +28,6 @@ const MyCustomForm = ({
     const initialValues = {
         name: '',
         customerEmail: '',
-        phone: '',
         message: '',
     };
 
@@ -48,7 +47,6 @@ const MyCustomForm = ({
                 {
                     message: values.message,
                     name: values.name,
-                    phone: values.phone,
                     interest: selectedInterest.join(' - '),
                     customerEmail: values.customerEmail,
                 },
@@ -75,8 +73,8 @@ const MyCustomForm = ({
     const renderSentMessage = () => {
         if (messageSent === 'succeed') {
             return <div className={`message succeed w-full text-center mb-6`}>
-                <h2 className={'mb-4 font-semibold'}>Thanks!</h2>
-                <p>{onSuccessMessage}</p>
+                <h2 className={'mb-4 font-semibold text-[#021627]'}>Thanks!</h2>
+                <p className={'text-[#021627]'}>{onSuccessMessage}</p>
             </div>
         }
         if (messageSent === 'error') {
