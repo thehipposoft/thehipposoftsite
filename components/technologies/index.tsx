@@ -67,7 +67,7 @@ const Technologies = () => {
                     viewport={{ once: true }}
                     transition={{duration: 1, delay: 1.5}}
                 >
-                    A quick look to our lastest projects
+                    A quick look to our latest projects
                 </motion.p>
             </div>
             <motion.div 

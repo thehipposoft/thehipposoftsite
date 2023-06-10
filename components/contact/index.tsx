@@ -8,8 +8,8 @@ const Contact = () => {
     const [openModal, setOpenModal] = useState<boolean>(false);
 
     return(
-        <div className="hippo-bg">
-            <div className='max-w-[1200px] m-auto flex flex-col items-center text-center justify-center h-screen' id='contact'>
+        <div className="bg-dark-blue">
+            <div className='max-w-[1200px] m-auto flex flex-col items-center text-center justify-center md:pb-10 pb-4' id='contact'>
                 <motion.h1
                     initial={{
                         opacity: 0,
