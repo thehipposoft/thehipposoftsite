@@ -4,7 +4,6 @@ import matter from 'gray-matter'
 //styles
 import styles from '../styles/Home.module.scss';
 //components
-import Header from '../components/header/Header';
 import Banner from '../components/banner/Banner';
 import Value from '../components/values';
 import Us from '../components/us';
