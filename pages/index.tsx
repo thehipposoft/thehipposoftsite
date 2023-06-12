@@ -58,5 +58,4 @@ export async function getStaticProps() {
         blogs
       }
     }
-  
-  }
+}
