@@ -1,5 +1,7 @@
 ---
-title: "My First Blog"
+author: Diego
+image: /uploads/2022-energy-inspection-accuratelogo-home-right.png
+title: My First Blog
 date: 24, August, 2021
 ---
 
