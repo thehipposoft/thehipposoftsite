@@ -49,8 +49,6 @@ export async function getStaticProps() {
         slug: filename.slice(0, filename.indexOf('.'))
       }
     })
-
-    console.log('>>blogs', blogs);
   
     return {
       props: {

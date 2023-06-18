@@ -2,7 +2,6 @@ import fs from 'fs'
 import matter from 'gray-matter'
 
 export default function Blog( { blogs } ) {
-    console.log(">>prop", blogs);
     return (
         <div className={'flex flex-col'}>
             <h1 className={'text-center text-black w-full'}>Blogs</h1>
@@ -31,8 +30,6 @@ export async function getStaticProps() {
         slug: filename.slice(0, filename.indexOf('.'))
       }
     })
-
-    console.log('>>blogs', blogs);
   
     return {
       props: {

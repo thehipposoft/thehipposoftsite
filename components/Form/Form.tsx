@@ -96,7 +96,6 @@ const MyCustomForm = ({
             newArray.splice(index, 1)
         }
         setSelectedInterest(newArray)
-        console.log(newArray)
     }
 
     const isInterestActive = (interest:string) => selectedInterest.find((i) => i === interest)
