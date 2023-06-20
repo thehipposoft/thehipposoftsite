@@ -2,23 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../header/Header';
 
-
-/*
-
-<video
-                autoPlay
-                muted
-                loop
-                id={'video'}
-                className={styles.video}>
-                <source
-                    src={'/assets/images/video_header.mp4'}
-                    type={'video/mp4'}
-                />
-            </video>
-*/
-
-
 const Banner = () => {
     return (
         <div className='relative'>

@@ -2,6 +2,8 @@ export default {
     cms_manual_init: true,
     backend: {
       name: 'git-gateway',
+      repo: 'borigendiego/thehipposoftsite',
+      branch: 'main'
     },
     media_folder: 'public/img',
     public_folder: 'img',
