@@ -1,9 +1,10 @@
-import fs from 'fs'
-import ReactMarkdown from 'react-markdown'
-import matter from 'gray-matter'
-import Head from 'next/head'
+import React from 'react';
+import fs from 'fs';
+import ReactMarkdown from 'react-markdown';
+import matter from 'gray-matter';
+import Head from 'next/head';
 
-export default function Blog({ frontmatter, markdown}) {
+export default function Blog({ frontmatter, markdown}: any) {
   return (
     <div className={'bg-dark-blue'}>
       <Head>
@@ -19,7 +20,7 @@ export default function Blog({ frontmatter, markdown}) {
   )
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({ params: { slug } }: any) {
   const fileContent = matter(fs.readFileSync(`./content/blogs/${slug}.md`, 'utf8'))
   let frontmatter = fileContent.data
   const markdown = fileContent.content

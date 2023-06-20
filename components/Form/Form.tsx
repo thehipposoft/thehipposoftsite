@@ -88,7 +88,7 @@ const MyCustomForm = ({
     };
 
     const handleInterest = (interest:string) => {
-        const newArray = [...selectedInterest]
+        const newArray: any = [...selectedInterest]
         const index = newArray.indexOf(interest)
         if (index === -1) {
             newArray.push(interest)

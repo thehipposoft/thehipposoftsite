@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-const SideMenu = ({sideMenu, closeSideMenu}) => {
+const SideMenu = ({
+    sideMenu, 
+    closeSideMenu
+}: any) => {
     const today = new Date();
     const day = String(today.getDate()).padStart(2, '0');
     const month = String(today.getMonth() + 1).padStart(2, '0');

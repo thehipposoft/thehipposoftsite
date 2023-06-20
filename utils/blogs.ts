@@ -5,7 +5,7 @@ export function getAllBlogs() {
     // Running on the server-side during build
     const fs = require('fs');
     const filesInBlogs = fs.readdirSync('./content/blogs');
-    const blogs = filesInBlogs.map((filename) => {
+    const blogs = filesInBlogs.map((filename:any) => {
       const file = fs.readFileSync(`./content/blogs/${filename}`, 'utf8');
       const matterData = matter(file);
 
