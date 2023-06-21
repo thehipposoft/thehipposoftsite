@@ -3,14 +3,12 @@ import { TEAM_DATA } from './constants.js'
 import Slide from "./Slide";
 import { motion } from 'framer-motion';
 
-
-const Caraousel = () => {
-
-    const carousel = useRef(null)
+const Carousel = () => {
+    const carousel: any = useRef(null);
 
     const next = () => {
         //check si el carousel tiene elementos
-        if (carousel.current.children.length > 0) {
+        if (carousel && carousel.current && carousel.current.children.length > 0) {
             //obtenemos el primer elemento del carousel
             const primerElemento = carousel.current.children[0];
             //transicion para el carousel
@@ -21,18 +19,18 @@ const Caraousel = () => {
             //mover el carousel
             carousel.current.style.transform = `translateX(-${tamañoSlide}px)`;
 
-            const transicion = () => {
+            const transition = () => {
                 //Se reinicia la posicion del slide
                 carousel.current.style.transition = 'none';
                 carousel.current.style.transform = `translateX(0)`;
                 //Tomamos el primer elemento y lo mandamos al final
                 carousel.current.appendChild(primerElemento);
 
-                carousel.current.removeEventListener('transitionend', transicion)
+                carousel.current.removeEventListener('transitionend', transition)
             }
 
             //EventListener para cuando termina la animación.
-            carousel.current.addEventListener('transitionend', transicion);
+            carousel.current.addEventListener('transitionend', transition);
         }
     }
     
@@ -52,12 +50,9 @@ const Caraousel = () => {
                 carousel.current.style.transition = `1000ms ease-out all`;
                 carousel.current.style.transform = `translateX(0)`;   
             }, 30)
-
         }
     }
     
-
-
     return(
         <motion.div 
         className='relative rounded-2xl'
@@ -102,4 +97,4 @@ const Caraousel = () => {
     )
 }
 
-export default Caraousel
+export default Carousel;

@@ -3,9 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
-
-const ProyectsCarousel = ({ proyects }:any) => {
+const ProjectsCarousel = ({ projects }:any) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   var settings = {
@@ -43,40 +41,49 @@ const ProyectsCarousel = ({ proyects }:any) => {
         }
       }
     ],
-    afterChange: (index) => setActiveIndex(index),
+    afterChange:(index: number) => setActiveIndex(index),
   };
 
   return (
-    <Slider {...settings}>
-      {proyects.map((proyect, index) => (
-        <div 
-          key={index}
-          className={`px-4 py-12 relative text-center ${activeIndex === index ? 'center-proyect z-10' : ''}`}
-          style={{ width: 100 }}
-        >
-          {
-            activeIndex === index ?
-              <a href={proyect.linkTo} rel='noreferrer' target={'_blank'} className={'proyect-display'}>
-                <h3 className='text-center md:text-2xl'>{proyect.title}</h3>
-                <img 
-                  src={proyect.image} 
-                  alt={`image ${index}`}
-                />
-              </a>
-            : 
-              <div className={'proyect-display'}>
-                <h3 className='text-center md:text-2xl'>{proyect.title}</h3>
-                <img 
-                  src={proyect.image} 
-                  alt={`image ${index}`}
-                />
-              </div>
-          }
-          <p className='absolute top-[50%] md:left-[41%] left-[35%] p-1 shadow-2xl'>Discover</p>
-        </div>
-      ))}
-    </Slider>
+    <>
+      {/* 
+        // @ts-ignore */}
+      <Slider {...settings}>
+        {projects && projects.map((project: any, index: number) => (
+          <div 
+            key={index}
+            className={`px-4 py-12 relative text-center ${activeIndex === index ? 'center-proyect z-10' : ''}`}
+            style={{ width: 100 }}
+          >
+            {
+              activeIndex === index ?
+                <a 
+                  href={project.linkTo} 
+                  rel='noreferrer' 
+                  target={'_blank'} 
+                  className={'proyect-display'}
+                >
+                  <h3 className='text-center md:text-2xl'>{project.title}</h3>
+                  <img 
+                    src={project.image} 
+                    alt={`image ${index}`}
+                  />
+                </a>
+              : 
+                <div className={'proyect-display'}>
+                  <h3 className='text-center md:text-2xl'>{project.title}</h3>
+                  <img 
+                    src={project.image} 
+                    alt={`image ${index}`}
+                  />
+                </div>
+            }
+            <p className='absolute top-[50%] md:left-[41%] left-[35%] p-1 shadow-2xl'>Discover</p>
+          </div>
+        ))}
+      </Slider>
+    </>
   );
 };
 
-export default ProyectsCarousel;
+export default ProjectsCarousel;

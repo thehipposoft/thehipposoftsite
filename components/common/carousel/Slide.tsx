@@ -1,6 +1,18 @@
 import React from "react";
 
-const Slide = ({title, text, name, rol}) => {
+type Props = {
+    title: string,
+    text: string,
+    name: string,
+    rol: string,
+}
+
+const Slide = ({
+    title, 
+    text, 
+    name, 
+    rol
+}:Props) => {
     return(
         <div className="min-w-[40%] overflow-hidden transition-all duration-300 ease-in z-10 relative p-8">
             <div className="flex justify-around bg-dark-blue mx-4 py-4 rounded-2xl carousel-slide">

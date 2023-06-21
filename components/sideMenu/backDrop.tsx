@@ -1,6 +1,9 @@
 import React from "react";
 
-const BackDrop = ({sideMenu, closeSideMenu}) => {
+const BackDrop = ({
+    sideMenu, 
+    closeSideMenu
+}: any) => {
     return(
         <img
             src="/assets/close-menu.png"

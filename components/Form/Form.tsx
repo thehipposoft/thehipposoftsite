@@ -88,7 +88,7 @@ const MyCustomForm = ({
     };
 
     const handleInterest = (interest:string) => {
-        const newArray = [...selectedInterest]
+        const newArray: any = [...selectedInterest]
         const index = newArray.indexOf(interest)
         if (index === -1) {
             newArray.push(interest)
@@ -96,7 +96,6 @@ const MyCustomForm = ({
             newArray.splice(index, 1)
         }
         setSelectedInterest(newArray)
-        console.log(newArray)
     }
 
     const isInterestActive = (interest:string) => selectedInterest.find((i) => i === interest)

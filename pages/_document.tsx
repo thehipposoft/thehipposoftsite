@@ -11,6 +11,9 @@ export default class MyDocument extends Document {
                     <meta property='og:description' content="We create to connect." />
                     <meta property='og:site_name' content='The Hipposoft' />
 
+                    {/* Netlify Widget */}
+                    <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+
                     <script type="application/ld+json"
                         dangerouslySetInnerHTML={{
                             __html: `{
