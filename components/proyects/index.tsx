@@ -1,10 +1,9 @@
 import React from "react";
 import { PROYECTS_DATA } from './constants';
-import ProyectsCarousel from "./ProyectsCarousel";
+import ProjectsCarousel from "./ProjectsCarousel";
 import { motion } from 'framer-motion';
 
-
-const Proyects = () => {
+const Projects = () => {
     return(
         <div className="bg-dark-blue">
             <div className='max-w-[1250px] mx-auto py-12 h-screen'>
@@ -53,11 +52,11 @@ const Proyects = () => {
                     transition={{duration: 1, delay: 2}}
                     className="md:mt-8"
                 >
-                    <ProyectsCarousel proyects={PROYECTS_DATA}/>
+                    <ProjectsCarousel projects={PROYECTS_DATA}/>
                 </motion.div>
             </div>
         </div>
     )
 }
 
-export default Proyects
+export default Projects
