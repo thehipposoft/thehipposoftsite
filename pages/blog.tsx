@@ -1,14 +1,15 @@
+import React from 'react';
 import fs from 'fs'
 import matter from 'gray-matter'
 
-export default function Blog( { blogs } ) {
+export default function Blog( { blogs }: any ) {
     
     return (
         <div className={'flex flex-col'}>
             <h1 className={'text-center text-black w-full'}>Blogs</h1>
             <div className={'w-full bg-slate-200 flex'}>
                 {
-                    blogs.map((item, index) => <div>
+                    blogs.map((item:any) => <div>
                         <h3>{item.title}</h3>
                     </div>)
                 }
