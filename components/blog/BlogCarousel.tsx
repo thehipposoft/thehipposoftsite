@@ -1,9 +1,10 @@
+import React from 'react';
 import { getAllBlogs } from '../../utils/blogs';
 
 export default async function BlogsCarousel() {
     return (
         <div>
-            <h1></h1>
+            <h1>Staging</h1>
         </div>
     )
     //console.log(">>getAllBlogs", getAllBlogs())
