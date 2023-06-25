@@ -29,7 +29,7 @@ const Value = () => {
     }
 
     return(
-        <div className='bg-dark-blue'>
+        <div className='bg-dark-blue top-fade bottom-fade'>
             <div className='max-w-[1200px] md:mx-auto py-24 '>
                 <div className='flex flex-col items-center text-center md:text-left my-4 md:my-0'>
                     <motion.h1

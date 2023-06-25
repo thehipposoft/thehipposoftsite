@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
     return(
-        <div className="bg-dark-blue">
-            <div className='max-w-[1250px] mx-auto py-12 h-screen'>
+        <div className="bg-dark-blue top-fade">
+            <div className='max-w-[1250px] mx-auto py-20'>
                 <div className='flex flex-col items-center text-center md:text-left' id='projects'>
                     <motion.h1
                         initial={{

@@ -8,7 +8,7 @@ const Contact = () => {
     const [openModal, setOpenModal] = useState<boolean>(false);
 
     return(
-        <div className="bg-dark-blue">
+        <div className="bg-dark-blue bottom-fade py-20">
             <div className='max-w-[1200px] m-auto flex flex-col items-center text-center justify-center md:pb-10 pb-4' id='contact'>
                 <motion.h1
                     initial={{
