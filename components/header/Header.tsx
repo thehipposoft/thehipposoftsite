@@ -89,8 +89,6 @@ const Header = () => {
             className={'w-[164px]'}
             src={imageUrls[currentImageIndex]}
             alt="Current Image"
-            onMouseEnter={startImageTransition}
-            onMouseLeave={stopImageTransition}
           />
         </CSSTransition>
       )}
