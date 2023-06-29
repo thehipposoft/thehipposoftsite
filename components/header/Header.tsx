@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CSSTransition } from 'react-transition-group';
-
 //Components
 import Button from '../common/Button';
-//Styles
-import styles from './Header.module.scss';
 import SideMenu from '../sideMenu';
 import BackDrop from '../sideMenu/backDrop';
+//Styles
+import styles from './Header.module.scss';
 
 const imageUrls = [
   '/assets/logo.png',

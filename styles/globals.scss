@@ -438,21 +438,3 @@ button {
   background: rgb(2,34,59);
   background: linear-gradient(180deg, rgba(2,34,59,1) 0%, rgba(2,0,36,0) 100%);
 }
-
-.image-transition-enter {
-  opacity: 0;
-}
-
-.image-transition-enter-active {
-  opacity: 1;
-  transition: opacity 500ms;
-}
-
-.image-transition-exit {
-  opacity: 1;
-}
-
-.image-transition-exit-active {
-  opacity: 0;
-  transition: opacity 500ms;
-}
