@@ -1,21 +1,34 @@
 import React from 'react';
 import fs from 'fs';
-import ReactMarkdown from 'react-markdown'
-import matter from 'gray-matter'
-import Head from 'next/head'
+import ReactMarkdown from 'react-markdown';
+import matter from 'gray-matter';
+import Head from 'next/head';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer';
 
 export default function Blog({ frontmatter, markdown}: any) {
   return (
-    <div className={'bg-dark-blue'}>
+    <div className={'bg-dark-blue overflow-x-hidden'}>
       <Head>
-        <title>Demo Blog | {frontmatter.title}</title>
+        <title>Blog | {frontmatter.title}</title>
       </Head>
-      <h1>{frontmatter.title}</h1>
-      <span>{frontmatter.date}</span>
-      <hr />
-      <ReactMarkdown>
-        {markdown}
-      </ReactMarkdown>
+      <Header></Header>
+      <div className={'bg-white py-12 blog-body'}>
+        <h1 className={'text-center text-black'}>{frontmatter.title}</h1>
+        <div className={'flex justify-center'}>
+          <span>
+            <p className={'mr-2'}>{frontmatter.date}</p>
+          </span>
+          <span className={'font-bold'}>{`By ${frontmatter.author}`}</span>
+        </div>
+        <div className={'max-w-[1200px] m-auto my-4'}>
+          <ReactMarkdown>
+            {markdown}
+          </ReactMarkdown>
+        </div>
+       
+      </div>
+      <Footer></Footer>
     </div>
   )
 }

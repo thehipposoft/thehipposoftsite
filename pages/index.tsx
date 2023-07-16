@@ -10,11 +10,11 @@ import Us from '../components/us';
 import Contact from '../components/contact';
 import Projects from '../components/proyects';
 import Footer from '../components/footer';
-//import BlogsCarousel from '../components/blog/BlogCarousel';
+import BlogsCarousel from '../components/blog/BlogCarousel';
 
-export default function Home() {
+export default function Home({ blogs }) {
     return (
-        <div className={styles.container}>
+        <div>
             <Head>
                 <title>HippoSoft | Let's Create</title>
                 <meta name="description" content="Let's Create" />
@@ -25,7 +25,9 @@ export default function Home() {
                 <Value />
                 <Us />
                 <Projects />
-               
+                {
+                  blogs && blogs.length && <BlogsCarousel blogs={blogs} />
+                }
                 <Contact />
             </main>
 
@@ -36,25 +38,19 @@ export default function Home() {
     )
 }
 
-
 export async function getStaticProps() {
-    // List of files in blogs folder
-    const filesInBlogs = fs.readdirSync('./content/blogs')
-  
-    // Get the front matter and slug (the filename without .md) of all files
-    const blogs = filesInBlogs.map(filename => {
-      const file = fs.readFileSync(`./content/blogs/${filename}`, 'utf8')
-      const matterData = matter(file)
-  
-      return {
-        ...matterData.data, // matterData.data contains front matter
-        slug: filename.slice(0, filename.indexOf('.'))
-      }
-    })
-  
-    return {
-      props: {
-        blogs
-      }
-    }
+  const blogsDirectory = './content/blogs';
+  const filesInBlogs = fs.readdirSync(blogsDirectory);
+
+  const blogs = filesInBlogs.map((file) => {
+    const slug = file.slice(0, file.indexOf('.'));
+    const fileContent = matter(fs.readFileSync(`${blogsDirectory}/${file}`, 'utf8'));
+    const frontmatter = fileContent.data;
+    const markdown = fileContent.content;
+    return { slug, frontmatter, markdown };
+  });
+
+  return {
+    props: { blogs },
+  };
 }

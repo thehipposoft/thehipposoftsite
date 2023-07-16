@@ -438,3 +438,38 @@ button {
   background: rgb(2,34,59);
   background: linear-gradient(180deg, rgba(2,34,59,1) 0%, rgba(2,0,36,0) 100%);
 }
+
+.blog-body {
+  h1, h2, h3, h4, span, li, p {
+    color: inherit;
+  }
+}
+
+.three-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+
+.blog-title {
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
+  transition: all 500ms ease-in-out;
+}
+
+.blog-tile:hover {
+  box-shadow: 0px 5px 10px rgba(177, 177, 177, 0.5);
+}
+
+.blogs-carousel {
+  .slick-disabled {
+    display: none !important;
+  }
+
+  @media (max-width: 600px)  {
+    .slick-list {
+      max-width: 300px;
+    }
+  }
+}
