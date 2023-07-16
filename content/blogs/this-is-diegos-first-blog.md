@@ -1,4 +1,6 @@
 ---
+author: Diego
+image: /uploads/image-placeholder.png
 title: This is Diego's first blog
 date: June 12, 2023 5:23 PM
 ---
