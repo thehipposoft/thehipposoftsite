@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import fs from 'fs';
 import ReactMarkdown from 'react-markdown';
 import matter from 'gray-matter';
@@ -12,7 +13,7 @@ export default function Blog({ frontmatter, markdown}: any) {
       <Head>
         <title>Blog | {frontmatter.title}</title>
       </Head>
-      <Header></Header>
+      <Header />
       <div className={'bg-white py-12 blog-body'}>
         <h1 className={'text-center text-black'}>{frontmatter.title}</h1>
         <div className={'flex justify-center'}>
@@ -21,7 +22,15 @@ export default function Blog({ frontmatter, markdown}: any) {
           </span>
           <span className={'font-bold'}>{`By ${frontmatter.author}`}</span>
         </div>
-        <div className={'max-w-[1200px] m-auto my-4'}>
+        <div className={'flex justify-center my-14'}>
+          <Image
+            src={frontmatter.image}
+            alt={`${frontmatter.title} hero image`}
+            width={1280}
+            height={510}
+          />
+        </div>
+        <div className={'max-w-[1200px] px-4 m-auto my-4'}>
           <ReactMarkdown>
             {markdown}
           </ReactMarkdown>
