@@ -1,6 +1,6 @@
 ---
 author: Mario
-image: /uploads/image-placeholder.png
+image: /uploads/growing-website-comp.jpeg
 title: Why is SEO So Important for Growing Businesses?
 date: July 23, 2023 5:11 PM
 ---
