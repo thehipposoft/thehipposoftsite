@@ -40,40 +40,40 @@ const BlogsCarousel = ({ blogs }:any) => {
 
     return (
         <>
-        {/* 
-            // @ts-ignore */}
-        <Slider {...settings}>
-            {blogs && blogs.map((blog: any, index: number) => (
-            <div 
-                key={index}
-                className={`px-6 py-12 `}
-                style={{ width: 100 }}
-            >
-                <div className={'bg-white max-w-[392px] blog-tile transition-all h-[420px] flex flex-col justify-between'}>
-                    <img 
-                        src={blog.frontmatter.image} 
-                        alt={`${blog.frontmatter.title} hero image`}
-                        className={'mb-2 object-contain max-[200px]'}
-                    />
-                    <div className={'p-6 flex flex-col grow justify-between'}>
-                        <div>
-                            <h4 className={'font-bold text-2xl text-dark-blue mb-3'}>
-                                {blog.frontmatter.title}
-                            </h4>
-                            <p className={'text-dark-blue three-lines mb-3'}>
-                                {blog.markdown}
-                            </p>
-                        </div>
-                        <a className={''} href={`/blog/${blog.slug}`}>
-                            <p className={'border-l-blue-700 border-l-[1px] border-solid pl-3 text-blue-700 underline'}>
-                                Read more
-                            </p>
+            {/* 
+                // @ts-ignore */}
+            <Slider {...settings}>
+                {blogs && blogs.map((blog: any, index: number) => (
+                    <div 
+                        key={index}
+                        className={`px-6 py-12 `}
+                        style={{ width: 100 }}
+                    >
+                        <a href={`/blog/${blog.slug}`}>
+                            <div className={'cursor-pointer bg-white max-w-[392px] blog-tile transition-all min-h-[420px] flex flex-col justify-between'}>
+                                <img 
+                                    src={blog.frontmatter.image} 
+                                    alt={`${blog.frontmatter.title} hero image`}
+                                    className={'mb-2 object-contain max-[200px]'}
+                                />
+                                <div className={'p-6 flex flex-col grow justify-between'}>
+                                    <div>
+                                        <h4 className={'font-bold text-2xl text-dark-blue mb-3'}>
+                                            {blog.frontmatter.title}
+                                        </h4>
+                                        <p className={'text-dark-blue three-lines mb-3'}>
+                                            {blog.markdown ? blog.markdown.replace("## Introduction", "") : null}
+                                        </p>
+                                    </div>
+                                        <p className={'border-l-blue-700 border-l-[1px] border-solid pl-3 text-blue-700 underline'}>
+                                            Read more
+                                        </p>
+                                </div>
+                            </div>
                         </a>
                     </div>
-                </div>
-            </div>
-            ))}
-        </Slider>
+                ))}
+            </Slider>
         </>
     );
 };

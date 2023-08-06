@@ -15,7 +15,9 @@ export default function Blog({ frontmatter, markdown}: any) {
       </Head>
       <Header />
       <div className={'bg-white py-12 blog-body'}>
-        <h1 className={'text-center text-black'}>{frontmatter.title}</h1>
+        <h1 className={'text-center text-black mb-8 max-w-[1200px] m-auto'}>
+          {frontmatter.title}
+        </h1>
         <div className={'flex justify-center'}>
           <span>
             <p className={'mr-2'}>{frontmatter.date}</p>
@@ -26,11 +28,11 @@ export default function Blog({ frontmatter, markdown}: any) {
           <Image
             src={frontmatter.image}
             alt={`${frontmatter.title} hero image`}
-            width={1280}
+            width={1200}
             height={510}
           />
         </div>
-        <div className={'max-w-[1200px] px-4 m-auto my-4'}>
+        <div className={'max-w-[1200px] md:px-0 px-4 m-auto my-4'}>
           <ReactMarkdown>
             {markdown}
           </ReactMarkdown>

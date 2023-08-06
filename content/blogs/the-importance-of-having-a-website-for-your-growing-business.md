@@ -1,7 +1,7 @@
 ---
 author: Diego
 image: /uploads/importance-of-website-min.jpeg
-title: The Importance of Having a Website for Your Growing Business
+title: The importance of having a website for your growing business
 date: August 6, 2023 12:00 AM
 ---
 ## Introduction
