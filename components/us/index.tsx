@@ -12,8 +12,8 @@ const Us = () => {
 
     return(
         <div className='background2'>
-            <div className='md:flex justify-between max-w-[1200px] md:mx-auto py-24' id='us'>
-                <div className='flex flex-col md:w-[28%] mt-8 md:mt-24 text-center md:text-left'>
+            <div className='lg:flex justify-between max-w-[1200px] lg:mx-auto py-24' id='us'>
+                <div className='flex flex-col lg:w-[28%] mt-8 lg:mt-24 text-center lg:text-left'>
                     <div>
                         <motion.h1 
                             initial={{
@@ -94,9 +94,9 @@ const Us = () => {
                     }}
                     viewport={{ once: true }}
                     transition={{duration: 1, delay: 1.7}}
-                    className='md:grid mt-4 md:mt-0 mx-auto md:mx-0 grid-cols-2 grid-rows-2'
+                    className='lg:grid mt-4 lg:mt-0 mx-auto lg:mx-0 grid-cols-2 grid-rows-2'
                 >
-                    <div className='md:w-[350px] w-80 mx-auto md:mx-0 md:h-[350px]'>
+                    <div className='lg:w-[350px] w-80 mx-auto lg:mx-0 lg:h-[350px]'>
                         <Box 
                             bg='/assets/images/us/us-design.png' 
                             label='BRAND & DESIGN'
@@ -106,7 +106,7 @@ const Us = () => {
                             }
                         />
                     </div>
-                    <div className='md:w-[350px] w-80 mx-auto md:mx-0 md:h-[350px]'>
+                    <div className='lg:w-[350px] w-80 mx-auto lg:mx-0 lg:h-[350px]'>
                         <Box 
                             bg='/assets/images/us/us-develop.png' 
                             label='WEB DEVELOPMENT'
@@ -116,7 +116,7 @@ const Us = () => {
                             }
                         />
                     </div>
-                    <div className='col-span-2 md:w-[700px] w-80 mx-auto md:mx-0 md:h-[350px]'>
+                    <div className='col-span-2 lg:w-[700px] w-80 mx-auto lg:mx-0 lg:h-[350px]'>
                         <Box 
                             bg='/assets/images/us/us-seo.png'
                             label='SEO'

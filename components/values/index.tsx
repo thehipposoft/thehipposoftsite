@@ -62,7 +62,7 @@ const Value = () => {
                     </motion.p>
                 </div>
                 <motion.div 
-                    className='grid md:grid-cols-3 grid-cols-1 gap-8 md:mt-16'
+                    className='grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-8 md:mt-16'
                     variants={parentVariants}
                     initial={'hidden'}
                     whileInView={'visible'}

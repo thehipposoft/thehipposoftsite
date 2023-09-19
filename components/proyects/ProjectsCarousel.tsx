@@ -52,7 +52,7 @@ const ProjectsCarousel = ({ projects }:any) => {
         {projects && projects.map((project: any, index: number) => (
           <div 
             key={index}
-            className={`px-4 py-12 relative text-center ${activeIndex === index ? 'center-proyect z-10' : ''}`}
+            className={`px-4 py-12 relative text-center ${activeIndex === index ? 'center-proyect cursor-pointer z-10' : ''}`}
             style={{ width: 100 }}
           >
             {
@@ -63,9 +63,9 @@ const ProjectsCarousel = ({ projects }:any) => {
                 target={'_blank'} 
                 className={'proyect-display'}
               >
-                <div className={'absolute w-full h-[80%] items-center justify-center flex left-0 right-0 mr-auto ml-auto z-10'}>
+                <div className={'absolute w-full h-[80%] items-center justify-center flex left-0 right-0 mr-auto ml-auto z-10 '}>
                   <div>
-                    <h3 className='text-center md:text-2xl'>
+                    <h3 className='text-center lg:text-2xl'>
                       {project.title}
                     </h3>
                     <p className='p-1 shadow-2xl'>

@@ -33,7 +33,7 @@ const Banner = () => {
                     }}
                     viewport={{ once: true }}
                     transition={{duration: 1.5, delay: 1}}
-                    className={'text-6xl md:text-8xl'}
+                    className={'text-6xl md:text-8xl text-center'}
                 >We create to connect.</motion.h1>
                 <motion.p
                     initial={{

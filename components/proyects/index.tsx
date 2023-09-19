@@ -7,7 +7,7 @@ const Projects = () => {
     return(
         <div className="bg-dark-blue top-fade">
             <div className='max-w-[1250px] mx-auto py-20'>
-                <div className='flex flex-col items-center text-center md:text-left' id='projects'>
+                <div className='flex flex-col items-center text-center lg:text-left' id='projects'>
                     <motion.h1
                         initial={{
                             opacity: 0,
@@ -24,7 +24,7 @@ const Projects = () => {
                         Our projects
                     </motion.h1>
                     <motion.p 
-                        className='md:w-2/4 text-center mb-6 mt-4 md:mt-8'
+                        className='lg:w-2/4 text-center mb-6 mt-4 md:mt-8'
                         initial={{
                             opacity: 0,
                             y: 50,
@@ -50,7 +50,7 @@ const Projects = () => {
                     }}
                     viewport={{ once: true }}
                     transition={{duration: 1, delay: 2}}
-                    className="md:mt-8"
+                    className="lg:mt-8"
                 >
                     <ProjectsCarousel projects={PROYECTS_DATA}/>
                 </motion.div>
