@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import fs from 'fs'
-import matter from 'gray-matter'
 //styles
+import '../styles/globals.scss';
 import styles from '../styles/Home.module.scss';
 //components
 import Banner from '../components/banner/Banner';
@@ -36,21 +35,4 @@ export default function Home({ blogs }) {
             </footer>
         </div>
     )
-}
-
-export async function getStaticProps() {
-  const blogsDirectory = './content/blogs';
-  const filesInBlogs = fs.readdirSync(blogsDirectory);
-
-  const blogs = filesInBlogs.map((file) => {
-    const slug = file.slice(0, file.indexOf('.'));
-    const fileContent = matter(fs.readFileSync(`${blogsDirectory}/${file}`, 'utf8'));
-    const frontmatter = fileContent.data;
-    const markdown = fileContent.content;
-    return { slug, frontmatter, markdown };
-  });
-
-  return {
-    props: { blogs },
-  };
 }

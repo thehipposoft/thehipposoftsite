@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { PROYECTS_DATA } from './constants';
 import ProjectsCarousel from "./ProjectsCarousel";

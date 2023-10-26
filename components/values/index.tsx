@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 //Components & constants
 import { motion, Variants } from 'framer-motion';
