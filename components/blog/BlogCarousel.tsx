@@ -2,7 +2,7 @@
 import React from 'react';
 import BlogsCarousel from '../common/BlogsCarousel';
 
-const Blogs = ({ blogs }) => {
+const Blogs = ({ blogs }: any) => {
   return (
       <div className={'flex bg-dark-blue'}>
         <div className={'flex bg-dark-blue max-w-[1200px] w-full lg:mx-auto py-24 justify-between flex-wrap items-center'}>

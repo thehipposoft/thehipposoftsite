@@ -9,9 +9,8 @@ import Us from '../components/us';
 import Contact from '../components/contact';
 import Projects from '../components/proyects';
 import Footer from '../components/footer';
-import BlogsCarousel from '../components/blog/BlogCarousel';
 
-export default function Home({ blogs }) {
+export default function Home() {
     return (
         <div>
             <Head>
@@ -24,9 +23,6 @@ export default function Home({ blogs }) {
                 <Value />
                 <Us />
                 <Projects />
-                {
-                  blogs && blogs.length && <BlogsCarousel blogs={blogs} />
-                }
                 <Contact />
             </main>
 
