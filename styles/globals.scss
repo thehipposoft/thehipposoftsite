@@ -217,7 +217,7 @@ button {
   }
 }
 
-//Carousel styles 
+//Carousel styles
 
 .proyect-display {
   width: 375px;
@@ -382,7 +382,7 @@ button {
 
 //lights background
 
-.background { 
+.background {
   background-image: url('/assets/main-background.png');
   background-size: cover;
 }
@@ -484,8 +484,14 @@ button {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  line-clamp: 3; 
+  line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.three-lines {
+  p {
+    color: $dark-blue;
+  }
 }
 
 .blog-title {

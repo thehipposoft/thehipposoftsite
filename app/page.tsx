@@ -4,13 +4,14 @@ import '../styles/globals.scss';
 import styles from '../styles/Home.module.scss';
 //components
 import Banner from '../components/banner/Banner';
-import Value from '../components/values';
-import Us from '../components/us';
+import Blogs from '@/components/blog';
 import Contact from '../components/contact';
-import Projects from '../components/proyects';
 import Footer from '../components/footer';
+import Projects from '../components/projects';
+import Us from '../components/us';
+import Value from '../components/values';
 
-export default function Home() {
+export default async function Home() {
     return (
         <div>
             <Head>
@@ -23,6 +24,7 @@ export default function Home() {
                 <Value />
                 <Us />
                 <Projects />
+                <Blogs />
                 <Contact />
             </main>
 

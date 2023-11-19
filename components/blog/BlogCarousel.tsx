@@ -1,8 +1,12 @@
-"use client";
 import React from 'react';
+import { Blog } from '@/src/types';
 import BlogsCarousel from '../common/BlogsCarousel';
 
-const Blogs = ({ blogs }: any) => {
+type Props = {
+  blogsData: Blog[]
+}
+
+const Blogs = ({blogsData}:Props) => {
   return (
       <div className={'flex bg-dark-blue'}>
         <div className={'flex bg-dark-blue max-w-[1200px] w-full lg:mx-auto py-24 justify-between flex-wrap items-center'}>
@@ -12,7 +16,7 @@ const Blogs = ({ blogs }: any) => {
               <p>Check them out!</p>
           </div>
           <div className={'lg:w-4/6 px-9 blogs-carousel'}>
-            <BlogsCarousel blogs={blogs} />
+            <BlogsCarousel blogs={blogsData} />
           </div>
         </div>
       </div>
