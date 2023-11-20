@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Image from 'next/image';
 
 const ProjectsCarousel = ({ projects }:any) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -47,21 +48,21 @@ const ProjectsCarousel = ({ projects }:any) => {
 
   return (
     <>
-      {/* 
+      {/*
         // @ts-ignore */}
       <Slider {...settings}>
         {projects && projects.map((project: any, index: number) => (
-          <div 
+          <div
             key={index}
             className={`px-4 py-12 relative text-center ${activeIndex === index ? 'center-proyect cursor-pointer z-10' : ''}`}
             style={{ width: 100 }}
           >
             {
-              activeIndex === index ? 
-              <a 
-                href={project.linkTo} 
-                rel='noreferrer' 
-                target={'_blank'} 
+              activeIndex === index ?
+              <a
+                href={project.linkTo}
+                rel='noreferrer'
+                target={'_blank'}
                 className={'proyect-display'}
               >
                 <div className={'absolute w-full h-[80%] items-center justify-center flex left-0 right-0 mr-auto ml-auto z-10 '}>
@@ -79,11 +80,13 @@ const ProjectsCarousel = ({ projects }:any) => {
                     </svg>
                   </div>
                 </div>
-                <img 
-                  src={project.image} 
+                <Image
+                  src={project.image}
                   alt={`image ${index}`}
+                  width={500}
+                  height={200}
                 />
-              </a> 
+              </a>
               : <div className={'proyect-display'}>
                 <div className={'absolute w-full h-[80%] items-center justify-center flex flex-col'}>
                   <h3 className='text-center md:text-2xl'>
@@ -93,8 +96,8 @@ const ProjectsCarousel = ({ projects }:any) => {
                     Discover
                   </p>
                 </div>
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={`image ${index}`}
                 />
               </div>

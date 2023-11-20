@@ -33,7 +33,7 @@ const Carousel = () => {
             carousel.current.addEventListener('transitionend', transition);
         }
     }
-    
+
     const back = () => {
         if (carousel.current.children.length > 0) {
             //Obtenemos ultimo elemento
@@ -48,13 +48,13 @@ const Carousel = () => {
 
             setTimeout(() => {
                 carousel.current.style.transition = `1000ms ease-out all`;
-                carousel.current.style.transform = `translateX(0)`;   
+                carousel.current.style.transform = `translateX(0)`;
             }, 30)
         }
     }
-    
+
     return(
-        <motion.div 
+        <motion.div
         className='relative rounded-2xl'
         initial={{
             opacity: 0,
@@ -70,12 +70,12 @@ const Carousel = () => {
             <div className="">
                 <div className="flex flex-nowrap justify-center items-center" ref={carousel}>
                     {
-                        TEAM_DATA.map((value, index) => <Slide title={value.title} text={value.text} name={value.name} rol={value.rol} />)
+                        TEAM_DATA.map((value) => <Slide title={value.title} text={value.text} name={value.name} rol={value.rol} />)
                     }
                 </div>
             </div>
             <div className="absolute top-[40%] w-full h-full z-20">
-                <motion.button 
+                <motion.button
                 onMouseDown={back}
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0}}
@@ -84,7 +84,7 @@ const Carousel = () => {
                 >
                     <img src='/assets/images/technologies/arrowBox.svg' className='carousel-left-arrow p-2'/>
                 </motion.button>
-                <motion.button 
+                <motion.button
                 onMouseDown={next}
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0}}
