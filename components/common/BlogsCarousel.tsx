@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import Image from 'next/image';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -56,11 +57,13 @@ const BlogsCarousel = ({ blogs }:Props) => {
                         style={{ width: 100 }}
                     >
                         <a href={`/blog/${blog.id}`}>
-                            <div className={'cursor-pointer bg-white max-w-[392px] blog-tile transition-all min-h-[420px] flex flex-col justify-between'}>
-                                <img
+                            <div className={'cursor-pointer bg-white max-w-[392px] transition-all min-h-[420px] flex flex-col justify-between hover:shadow-white hover:shadow-md'}>
+                                <Image
                                     src={blog.image}
                                     alt={`${blog.title} hero image`}
-                                    className={'mb-2 object-contain max-[200px]'}
+                                    className={'mb-2 object-contain'}
+                                    width={400}
+                                    height={60}
                                 />
                                 <div className={'p-6 flex flex-col grow justify-between'}>
                                     <div>
