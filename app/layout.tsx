@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'The Hipposoft project',
-  description: "Let's Create",
+  title: "The Hipposoft | Let's Create",
+  description: "We create to connect. We create and build digital experiences to boost your business. We want to inspire you.  ",
 }
 import '../styles/globals.scss'
 

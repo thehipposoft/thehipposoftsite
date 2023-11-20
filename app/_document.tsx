@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
                 <Head>
                     <meta property='og:type' content='website' />
                     <meta property='og:title' content='The Hipposoft' />
-                    <meta property='og:description' content="We create to connect." />
+                    <meta property='og:description' content="We create to connect. We create and build digital experiences to boost your business. We want to inspire you." />
                     <meta property='og:site_name' content='The Hipposoft' />
 
                     {/* Netlify Widget */}
