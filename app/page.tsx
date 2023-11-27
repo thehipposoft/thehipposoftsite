@@ -1,4 +1,3 @@
-import Head from 'next/head'
 //styles
 import '../styles/globals.scss';
 import styles from '../styles/Home.module.scss';
@@ -14,11 +13,6 @@ import Value from '../components/values';
 export default async function Home() {
     return (
         <div>
-            <Head>
-                <title>HippoSoft | Let's Create</title>
-                <meta name="description" content="Let's Create" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
             <main className={`${styles.main} relative overflow-hidden`}>
                 <Banner />
                 <Value />
