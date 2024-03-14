@@ -1,5 +1,5 @@
 export default async function getAllBlogs()  {
-    const res = await fetch('https://admin.thehipposoft.com/wp-json/wp/v2/posts?acf_format=standard');
+    const res = await fetch('https://wp.thehipposoft.com/wp-json/wp/v2/posts');
     const resolved = await res.json();
 
     const result = resolved.map((post: any) => {

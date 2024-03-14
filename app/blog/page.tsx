@@ -8,7 +8,7 @@ export const metadata:Metadata = {
 
 export default async function BlogPage() {
     //const blogsData: Promise<> = getAllBlogs(); TODO: Add correct Type
-    const blogsData: any = getAllBlogs();    
+    const blogsData: any = getAllBlogs();
     const blogs = await blogsData;
     const publishedBlogs = blogs.filter((b: any) => b.status === 'publish');
 
@@ -27,7 +27,7 @@ export default async function BlogPage() {
                         </div>
                     )
                 }
-                    
+
                 )
             }
         </div>

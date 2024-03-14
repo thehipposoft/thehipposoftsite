@@ -1,5 +1,5 @@
 export default async function getBlog(blogId: number) {
-    const res = await fetch(`https://admin.thehipposoft.com/wp-json/wp/v2/posts/${blogId}?acf_format=standard`);
+    const res = await fetch(`https://wp.thehipposoft.com/wp-json/wp/v2/posts/${blogId}?acf_format=standard`);
     const post = await res.json();
 
     const result = {

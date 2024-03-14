@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
               protocol: 'https',
-              hostname: 'admin.thehipposoft.com',
+              hostname: 'wp.thehipposoft.com',
               port: '',
             },
           ],
