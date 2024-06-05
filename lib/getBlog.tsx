@@ -8,7 +8,7 @@ export default async function getBlog(blogId: number) {
         slug: post.slug,
         date: post.date,
         content: post.content.rendered,
-        link: post.link,
+        link: post.link, 
         image: post.jetpack_featured_media_url,
         author_name: post.acf.author_name,
         excerpt: post.excerpt.rendered

@@ -1,6 +1,5 @@
 //styles
 import '../styles/globals.scss';
-import styles from '../styles/Home.module.scss';
 //components
 import Banner from '../components/banner/Banner';
 import Blogs from '@/components/blog';
@@ -13,7 +12,7 @@ import Value from '../components/values';
 export default async function Home() {
     return (
         <div>
-            <main className={`${styles.main} relative overflow-hidden`}>
+            <main className={`relative overflow-hidden`}>
                 <Banner />
                 <Value />
                 <Us />
@@ -22,7 +21,7 @@ export default async function Home() {
                 <Contact />
             </main>
 
-            <footer className={styles.footer}>
+            <footer className={`bg-[#021627] pb-[2%] flex flex-col justify-end relative`}>
                 <Footer />
             </footer>
         </div>

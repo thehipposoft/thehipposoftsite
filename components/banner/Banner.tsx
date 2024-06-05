@@ -15,14 +15,14 @@ const Banner = () => {
                     id={'video'}
                     className={'video'}>
                     <source
-                        src={'/assets/banner-video.mp4'}
+                        src={'https://res.cloudinary.com/du31j65g6/video/upload/v1717591452/Hippo/banner-video_t8heff.mp4'}
                         type={'video/mp4'}
                     />
                 </video>
-            <motion.div 
+            <motion.div
                 initial={{opacity: 1}}
                 className={'flex flex-col justify-center items-center h-[90vh] overflow-hidden relative text-center md:text-left z-[2] md:pb-16 banner-opacity'}
-            >   
+            >
                 <motion.h1
                     initial={{
                         opacity: 0,
@@ -49,8 +49,8 @@ const Banner = () => {
                     transition={{duration: 1.5, delay: 2}}
                     className={'md:w-[470px] w-9/12 md:text-center pt-2'}
                 >
-                    
-                    We communicate. We connect, we are in constant motion. 
+
+                    We communicate. We connect, we are in constant motion.
                     We don't follow the rules because we come to innovate.
                     We want you to be part of this.
                 </motion.p>

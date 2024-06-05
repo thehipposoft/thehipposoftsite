@@ -510,3 +510,14 @@ button {
     }
   }
 }
+
+.footer::before {
+  z-index: 2;
+  width: 100%;
+  content: " ";
+  height: 35px;
+  position: absolute;
+  top: -34px;
+  background: $dark-blue;
+  background: linear-gradient(0deg, $dark-blue 0%, rgba(2,0,36,0) 100%);
+}
