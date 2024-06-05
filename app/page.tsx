@@ -9,6 +9,7 @@ import Projects from '../components/projects';
 import Us from '../components/us';
 import Value from '../components/values';
 
+
 export default async function Home() {
     return (
         <div>

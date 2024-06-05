@@ -267,6 +267,12 @@ button {
   }
 }
 
+.slide-main {
+  h3, p {
+    text-shadow: 3px 3px 5px rgb(0 0 0);
+  }
+}
+
 .slick-next {
   right: 30px;
 }
@@ -520,4 +526,9 @@ button {
   top: -34px;
   background: $dark-blue;
   background: linear-gradient(0deg, $dark-blue 0%, rgba(2,0,36,0) 100%);
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }

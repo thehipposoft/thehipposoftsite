@@ -1,37 +1,31 @@
 const PROYECTS_DATA = [
     {
-       image: '/assets/images/proyects/proyects-steel.png',
+       image: '/assets/images/proyects/steelart.png',
        title: 'Steel Art',
        text: 'Example text',
        linkTo: 'https://steelartsla.com.ar/',
     },
     {
-       image: '/assets/images/proyects/proyects-james.png',
+       image: '/assets/images/proyects/conrad.png',
        title: 'James Conrad Architect',
        text: 'Example text',
        linkTo: 'https://www.conradarchitect.com/',
 
     },
     {
-       image: '/assets/images/proyects/proyects-rocksteady.png',
+       image: '/assets/images/proyects/rocksteady.png',
        title: 'Rock Steady Digital',
        text: 'Example text',
        linkTo: 'https://www.rocksteadydigital.com.au/',
     },
     {
-        image: '/assets/images/proyects/proyects-spektrum.png',
+        image: '/assets/images/proyects/spektrum.png',
         title: 'SPEKTRUM',
         text: 'Example text',
         linkTo: 'https://spektrum-holding.de/',
     },
     {
-        image: '/assets/images/proyects/proyects-inspir.png',
-        title: 'Inspir performance',
-        text: 'Example text',
-        linkTo: 'https://www.inspirperformance.com/',
-    },
-    {
-        image: '/assets/images/proyects/proyects-mbanalyst.png',
+        image: '/assets/images/proyects/mbanalyst.png',
         title: 'MBAnalyst',
         text: 'Example text',
         linkTo: 'https://www.mbanalyst.com/',

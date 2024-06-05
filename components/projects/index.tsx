@@ -4,6 +4,8 @@ import { PROYECTS_DATA } from './constants';
 import ProjectsCarousel from "./ProjectsCarousel";
 import { motion } from 'framer-motion';
 
+
+
 const Projects = () => {
     return(
         <div className="bg-dark-blue top-fade">
