@@ -1,7 +1,5 @@
 import React from 'react';
-import styles from './Button.module.scss';
 import { motion } from 'framer-motion';
-
 
 type ButtonType = {
     label: string,
@@ -19,7 +17,7 @@ const Button = (
         <div>
             <motion.button
                 type={'button'}
-                className={styles.btn}
+                className={`btn outline-none relative z-[1] cursor-pointer rounded-[48px] py-4 px-7 `}
                 initial={{
                     opacity: 0,
                     y: 25,
