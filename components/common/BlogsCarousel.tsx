@@ -56,7 +56,7 @@ const BlogsCarousel = ({ blogs }:Props) => {
                         className={'px-6 py-12'}
                         style={{ width: 100 }}
                     >
-                        <a href={`/blog/${blog.id}`}>
+                        <a href={`/blogs/${blog.id}`}>
                             <div className={'cursor-pointer bg-white max-w-[392px] transition-all min-h-[420px] flex flex-col justify-between hover:shadow-white hover:shadow-md'}>
                                 <Image
                                     src={blog.image}
